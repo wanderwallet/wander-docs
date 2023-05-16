@@ -19,7 +19,7 @@ const tx = await arweave.createTransaction({
 // sign transaction
 await arweave.transactions.sign(tx);
 
-// handle signed transaction
+// TODO: handle signed transaction
 ```
 
 When signing a transaction through [`arweave-js`](https://npmjs.com/arweave), you'll need to omit the second argument of the `sign()` function, or set it to `"use_wallet"`. This will let the package know to use the extension in the background to sign the transaction.
