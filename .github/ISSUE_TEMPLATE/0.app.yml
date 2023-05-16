@@ -1,6 +1,6 @@
 name: "Add application"
 description: "A template for requesting an application's addition to the list at the ArConnect webiste"
-title: "[APP] Add "appname" to apps list"
+title: '[APP] Add "appname" to apps list'
 labels: ["enhancement"]
 body:
   - type: markdown
