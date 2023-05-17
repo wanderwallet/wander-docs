@@ -13,11 +13,11 @@ To use the different functionalities the ArConnect API provides, you need to req
 | `gateway?`    | [`Gateway`](connect.md#custom-gateway-config)              | Custom gateway config                                                             |
 
 {% hint style="info" %}
-**Note:** The `appInfo` argument is optional, if it is not provided, the extension will use your site's title and favicon as application data
+**Note:** The `appInfo` argument is optional, if it is not provided, the extension will use your site's title and favicon as application data.
 {% endhint %}
 
 {% hint style="info" %}
-**Note:** The `gateway` argument is optional, if it is not provided, the extension will use the default `arweave.net` gateway for the executed API functions
+**Note:** The `gateway` argument is optional, if it is not provided, the extension will use the default `arweave.net` gateway for the executed API. functions
 {% endhint %}
 
 ## Permissions
@@ -42,7 +42,7 @@ You can provide your application's name and logo to the extension. Please make s
 ```ts
 interface AppInfo {
   name?: string; // optional application name
-  logo?: string; // optional application logo
+  logo?: string; // optional application logo url
 }
 ```
 
