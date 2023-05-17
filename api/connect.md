@@ -2,15 +2,15 @@
 description: ArConnect Injected API connect() function
 ---
 
-# Connect
+# 🔗 Connect
 
 To use the different functionalities the ArConnect API provides, you need to request permissions from the user to interact with their wallets. Each API function has their own permission(s), which can be requested at any time with the `connect()` function.
 
-| Argument       | Type                                             | Description                                                                       |
-|----------------|--------------------------------------------------|-----------------------------------------------------------------------------------|
-| `permissions`  | [`Array<PermissionType>`](#permissions)          | An array of permission to request from the user (at least one has to be included) |
-| `appInfo?`     | [`AppInfo`](#additional-application-information) | Additional information about the app                                              |
-| `gateway?`     | [`Gateway`](#custom-gateway-config)              | Custom gateway config                                                             |
+| Argument      | Type                                                       | Description                                                                       |
+| ------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `permissions` | [`Array<PermissionType>`](connect.md#permissions)          | An array of permission to request from the user (at least one has to be included) |
+| `appInfo?`    | [`AppInfo`](connect.md#additional-application-information) | Additional information about the app                                              |
+| `gateway?`    | [`Gateway`](connect.md#custom-gateway-config)              | Custom gateway config                                                             |
 
 {% hint style="info" %}
 **Note:** The `appInfo` argument is optional, if it is not provided, the extension will use your site's title and favicon as application data
@@ -24,16 +24,16 @@ To use the different functionalities the ArConnect API provides, you need to req
 
 ArConnect requires specific permissions from the user for each interaction that involves the usage of their wallet.
 
-| Permission              | Description                                                              |
-|-------------------------|--------------------------------------------------------------------------|
-| `ACCESS_ADDRESS`        | Allow the app to get the active wallet's address                         |
-| `ACCESS_PUBLIC_KEY`     | Enable the app to access the active wallet's public key                  |
-| `ACCESS_ALL_ADDRESSES`  | Enable the app to access the active wallet's public key                  |
-| `SIGN_TRANSACTION`      | Allow the app to sign an Arweave transaction (Base layer)                |
-| `ENCRYPT`               | Enable the app to encrypt data with the user's wallet through ArConnect  |
-| `DECRYPT`               | Allow the app to decrypt data encrypted with the user's wallet           |
-| `SIGNATURE`             | Allow the app to sign messages with the user's wallet thorugh ArConnect  |
-| `ACCESS_ARWEAVE_CONFIG` | Enable the app to access the current gateway config                      |
+| Permission              | Description                                                             |
+| ----------------------- | ----------------------------------------------------------------------- |
+| `ACCESS_ADDRESS`        | Allow the app to get the active wallet's address                        |
+| `ACCESS_PUBLIC_KEY`     | Enable the app to access the active wallet's public key                 |
+| `ACCESS_ALL_ADDRESSES`  | Enable the app to access the active wallet's public key                 |
+| `SIGN_TRANSACTION`      | Allow the app to sign an Arweave transaction (Base layer)               |
+| `ENCRYPT`               | Enable the app to encrypt data with the user's wallet through ArConnect |
+| `DECRYPT`               | Allow the app to decrypt data encrypted with the user's wallet          |
+| `SIGNATURE`             | Allow the app to sign messages with the user's wallet thorugh ArConnect |
+| `ACCESS_ARWEAVE_CONFIG` | Enable the app to access the current gateway config                     |
 
 ## Additional application information
 
