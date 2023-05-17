@@ -4,7 +4,7 @@ description: ArConnect DOM events
 
 # ‼ Events
 
-ArConnect provides useful custom events to track the state of the extension. These events implement the [`CustomEvent`](https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events#adding_custom_data_%E2%80%93_customevent) browser API.
+ArConnect provides useful custom events to track the state of the extension. These events implement the [`CustomEvent`](https://developer.mozilla.org/en-US/docs/Web/Events/Creating\_and\_triggering\_events#adding\_custom\_data\_%E2%80%93\_customevent) browser API.
 
 ## `arweaveWalletLoaded` event
 
@@ -40,7 +40,7 @@ addEventListener("walletSwitch", (e) => {
 ## Event emitter
 
 {% hint style="warning" %}
-**Note:** The event emitter is only available in the **ArConnect BETA**.
+**Note:** The event emitter is only available in the [**ArConnect BETA**](../devtools/beta.md).
 {% endhint %}
 
 The event emitter is available under `window.arweaveWallet.events` as a more advanced event system for the extension.
