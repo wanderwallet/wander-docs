@@ -30,7 +30,7 @@ Once the transaction is signed, you can safely post it to the network.
 
 The ArConnect Injected API provides extra functionalities in case you wish to utilize the user's wallet to its full extent securely. These features are not integrated in the `arweave-js` package, but can be useful to further customize your app. The above mentioned `window.arweaveWallet` object holds the api functions necessary for this.
 
-Each function is described in detail in the next following pages.
+Each function is described in detail in the following pages.
 
 {% hint style="danger" %}
 **Please remember:** to interact with the API, make sure that the `arweaveWalletLoaded` event has already been fired. Read more about that [here](events.md).
