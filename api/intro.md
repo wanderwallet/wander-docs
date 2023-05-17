@@ -33,5 +33,5 @@ The ArConnect Injected API provides extra functionalities in case you wish to ut
 Each function is described in detail in the next following pages.
 
 {% hint style="danger" %}
-**Please remember:** to interact with the API, make sure that the `arweaveWalletLoaded` event has already been fired. Read more about that [here](./events/load).
+**Please remember:** to interact with the API, make sure that the `arweaveWalletLoaded` event has already been fired. Read more about that [here](events/load).
 {% endhint %}

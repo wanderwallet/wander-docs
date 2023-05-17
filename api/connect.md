@@ -1,5 +1,5 @@
 ---
-description: ArConnect Injected API `connect()` function
+description: ArConnect Injected API connect() function
 ---
 
 # 🔗 Connect
