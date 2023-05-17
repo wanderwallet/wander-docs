@@ -9,12 +9,13 @@
 * [📍 ArLocal Devtools](devtools/arlocal-devtools.md)
 
 ## Demos
+
 * [📱 Applications](https://arconnect.io/apps)
 
 ## API
 
 * [📃 Intro](api/intro.md)
-* [‼ Events](api/events.md)
+* [🗓 Events](api/events.md)
 * [🔗 Connect](api/connect.md)
 * [🚪 Disconnect](api/disconnect.md)
 * [👨 Get Active Address](api/get-active-address.md)
