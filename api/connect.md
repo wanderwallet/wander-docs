@@ -61,7 +61,7 @@ interface Gateway {
 ## Example usage
 
 ```ts
-// connect to the extensions
+// connect to the extension
 await window.arweaveWallet.connect(
   // request permissions to read the active address
   ["ACCESS_ADDRESS"],
