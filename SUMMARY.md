@@ -8,6 +8,9 @@
 * [🦔 ArConnect Devtools](devtools/arconnect-devtools.md)
 * [📍 ArLocal Devtools](devtools/arlocal-devtools.md)
 
+## Demos
+* [📱 Applications](https://arconnect.io/apps)
+
 ## API
 
 * [📃 Intro](api/intro.md)
@@ -24,3 +27,7 @@
 * [✍ Crypto Signature](api/signature.md)
 * [🤝 Retrive Permissions](api/get-permissions.md)
 * [☁ Retrive Gateway Config](api/get-arweave-config.md)
+
+***
+
+* [🌐 arconnect.io](https://arconnect.io)
