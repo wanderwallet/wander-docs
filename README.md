@@ -1,5 +1,5 @@
 ---
-description: Secure wallet management for Arweave
+description: A non-custodial Arweave-native wallet with extensive features, all in your favorite browser.
 ---
 
 # 👋 Welcome to ArConnect
