@@ -2,7 +2,7 @@
 description: Introducing the ArConnect Injected API
 ---
 
-# 📃 Intro to ArConnect API
+# 📃 Intro
 
 The ArConnect API is a JavaScript object, injected into each browser tab. To interact with it, you simply need to call one of the functions in the `window.arweaveWallet` object.
 
@@ -33,7 +33,7 @@ The ArConnect Injected API provides extra functionalities in case you wish to ut
 Each function is described in detail in the next following pages.
 
 {% hint style="danger" %}
-**Please remember:** to interact with the API, make sure that the `arweaveWalletLoaded` event has already been fired. Read more about that [here](events/load).
+**Please remember:** to interact with the API, make sure that the `arweaveWalletLoaded` event has already been fired. Read more about that [here](events.md).
 {% endhint %}
 
 ## TypeScript types
