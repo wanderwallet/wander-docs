@@ -29,3 +29,5 @@ Internally however, we changed up how the application data is stored, unifying p
 - Internalization (i18n)
 - [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/) support
 - Improved DX (Developer Tooling)
+
+The full changelog can be viewed [here](https://github.com/arconnectio/ArConnect/pull/95).
