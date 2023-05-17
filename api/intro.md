@@ -35,3 +35,23 @@ Each function is described in detail in the next following pages.
 {% hint style="danger" %}
 **Please remember:** to interact with the API, make sure that the `arweaveWalletLoaded` event has already been fired. Read more about that [here](events/load).
 {% endhint %}
+
+## TypeScript types
+
+To support ArConnect types for `window.arweaveWallet`, you can install the npm package `arconnect`, like this:
+
+```sh
+npm i -D arconnect
+```
+
+or
+
+```sh
+yarn add -D arconnect
+```
+
+To add the types to your project, you should either include the package in your `tsconfig.json`, or add the following to your `env.d.ts` file:
+
+```ts
+/// <reference types="arconnect" />
+```
