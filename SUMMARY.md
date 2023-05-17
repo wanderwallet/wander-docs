@@ -11,7 +11,7 @@
 * [&#8252; Events](api/events.md)
 * [🔗 Connect](api/connect.md)
 * [🚪 Disconnect](api/disconnect.md)
-* [👨‍💻 Active Address](api/get-active-address.md)
+* [👨&zwj;💻 Active Address](api/get-active-address.md)
 * [🔠 All Addresses](api/get-all-addresses.md)
 * [🪪 Wallet Names](api/get-wallet-names.md)
 * [💳 Sign Transaction](api/sign.md)
