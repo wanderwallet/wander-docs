@@ -4,6 +4,12 @@ description: Introducing the ArConnect Injected API
 
 # 📃 Intro
 
+<div data-full-width="false">
+
+<figure><img src="../.gitbook/assets/Docs-API.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 The ArConnect API is a JavaScript object, injected into each browser tab. To interact with it, you simply need to call one of the functions in the `window.arweaveWallet` object.
 
 ## Basic usage
