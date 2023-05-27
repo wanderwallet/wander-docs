@@ -31,5 +31,5 @@ const signature = await window.arweaveWallet.signature(new TextEncoder().encode(
   saltLength: 0,
 });
 
-console.log("The signature is", signature)
+console.log("The signature is", signature);
 ```
