@@ -39,7 +39,7 @@ The ArConnect Injected API provides extra functionalities in case you wish to ut
 Each function is described in detail in the following pages.
 
 {% hint style="danger" %}
-**Please remember:** to interact with the API, make sure that the `arweaveWalletLoaded` event has already been fired. Read more about that [here](events.md).
+**Please remember:** to interact with the API, make sure that the `arweaveWalletLoaded` event has already been fired. Read more about that [here](events.md#arweavewalletloaded-event).
 {% endhint %}
 
 ## TypeScript types
@@ -60,4 +60,15 @@ To add the types to your project, you should either include the package in your 
 
 ```ts
 /// <reference types="arconnect" />
+```
+
+## Additional Injected API fields
+
+The ArConnect Injected API provides some additional information about the extension. You can retrive the wallet version (`window.arweaveWallet.walletVersion`) and you can even verify that the currently used wallet API indeed belongs to ArConnect using the wallet name (`window.arweaveWallet.walletName`).
+
+```ts
+addEventListener("arweaveWalletLoaded", () => {
+  console.log(`You are using the ${window.arweaveWallet.walletName} wallet.`);
+  console.log(`Wallet version is ${window.arweaveWallet.walletVersion}`);
+});
 ```
