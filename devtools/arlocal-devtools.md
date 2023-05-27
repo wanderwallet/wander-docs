@@ -34,6 +34,6 @@ You can mint testnet Arweave tokens that can be used like regular AR. Enter the 
 
 The ArLocal Devtools allow you to create new transactions with tags, a target and data. Simply set the desired fields under the `Create Transaction` title, enter your password and click *Send Transaction*. The tool will submit the transaction and request the testnet to mine a block.
 
-## Manual block mine
+## Manual block mining
 
 You can manually request the testnet to mine a block by clicking the *Mine* button, under the *Send Transaction* button.
