@@ -24,7 +24,7 @@ To submit a transaction to the Arweave Network, it first has to be signed using 
 {% endhint %}
 
 {% hint style="warning" %}
-**Note:** If you are trying to sign a larger piece of data (5 MB <), make sure to notify the user to not switch / close browser tab. Larger transactions are split into chunks in the background and will take longer to sign.
+**Note:** If you are trying to sign a larger piece of data (5 MB <), make sure to notify the user to not switch / close the browser tab. Larger transactions are split into chunks in the background and will take longer to sign.
 {% endhint %}
 
 ## Example usage
