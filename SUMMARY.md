@@ -22,7 +22,7 @@
 * [📋 Get All Addresses](api/get-all-addresses.md)
 * [🔠 Get Wallet Names](api/get-wallet-names.md)
 * [💳 Sign Transaction](api/sign.md)
-* [💸 Dispatch Transaction](api/dispatch.md)
+* [🚀 Dispatch Transaction](api/dispatch.md)
 * [➕ Add token](api/add-token.md)
 * [❔ Check token added](api/is-token-added.md)
 * [🔐 Encrypt](api/encrypt.md)
