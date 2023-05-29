@@ -5,7 +5,7 @@ description: ArConnect Injected API addToken() function
 # Add token
 
 {% hint style="warning" %}
-**Note:** The `addToken()` function is only available in the [**ArConnect BETA**](beta.md).
+**Note:** The `addToken()` function is only available in the [**ArConnect BETA**](devtools/beta.md).
 {% endhint %}
 
 In the new ArConnect version, the extension only shows tokens that the user has added. Tokens can be added via the `addToken()` function, after the user has approved it.
