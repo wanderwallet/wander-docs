@@ -23,6 +23,7 @@
 * [🔠 Get Wallet Names](api/get-wallet-names.md)
 * [💳 Sign Transaction](api/sign.md)
 * [💸 Dispatch Transaction](api/dispatch.md)
+* [Add token](api/add-token.md)
 * [🔐 Encrypt](api/encrypt.md)
 * [🔓 Decrypt](api/decrypt.md)
 * [✍ Crypto Signature](api/signature.md)
