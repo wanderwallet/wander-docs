@@ -2,19 +2,19 @@
 description: ArConnect Injected API addToken() function
 ---
 
-# Add token
+# ➕ Add token
 
 {% hint style="warning" %}
-**Note:** The `addToken()` function is only available in the [**ArConnect BETA**](devtools/beta.md).
+**Note:** The `addToken()` function is only available in the [**ArConnect BETA**](../devtools/beta.md).
 {% endhint %}
 
 In the new ArConnect version, the extension only shows tokens that the user has added. Tokens can be added via the `addToken()` function, after the user has approved it.
 
-| Argument   | Type                                           | Description                                                             |
-| ---------- | ---------------------------------------------- | ----------------------------------------------------------------------- |
-| `id`       | `string`                                       | The contract ID of the token to add to ArConnect                        |
-| `type?`    | `"asset"` or `"collectible"`                   | Type of the token (determinates how it'll be displayed)                 |
-| `gateway?` | [`Gateway`](connect.md#custom-gateway-config)  | Custom gateway config for the token (balance will be loaded from there) |
+| Argument   | Type                                          | Description                                                             |
+| ---------- | --------------------------------------------- | ----------------------------------------------------------------------- |
+| `id`       | `string`                                      | The contract ID of the token to add to ArConnect                        |
+| `type?`    | `"asset"` or `"collectible"`                  | Type of the token (determinates how it'll be displayed)                 |
+| `gateway?` | [`Gateway`](connect.md#custom-gateway-config) | Custom gateway config for the token (balance will be loaded from there) |
 
 {% hint style="info" %}
 **Note:** This function does not require any permissions or the app to be connected to ArConnect.
