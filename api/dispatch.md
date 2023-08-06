@@ -2,12 +2,12 @@
 description: ArConnect Injected API dispatch() function
 ---
 
-# 💸 Dispatch Transaction
+# Dispatch Transaction
 
-The `dispatch()` function allows you to quickly sign and send a transaction to the network in a bundled format. It is best for smaller datas and contract interactions. If the bundled transaction cannot be submitted, it will fall back to a base layer transaction. The function returns the [result](#dispatch-result) of the API call.
+The `dispatch()` function allows you to quickly sign and send a transaction to the network in a bundled format. It is best for smaller datas and contract interactions. If the bundled transaction cannot be submitted, it will fall back to a base layer transaction. The function returns the [result](dispatch.md#dispatch-result) of the API call.
 
-| Argument      | Type                                                       | Description                                                                       |
-| ------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Argument      | Type                                                                    | Description                                                  |
+| ------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------ |
 | `transaction` | [`Transaction`](https://github.com/arweaveTeam/arweave-js#transactions) | A valid Arweave transaction instance (**without a keyfile**) |
 
 {% hint style="info" %}
@@ -16,6 +16,10 @@ The `dispatch()` function allows you to quickly sign and send a transaction to t
 
 {% hint style="warning" %}
 **Note:** If you are trying to sign a larger piece of data (5 MB <), make sure to notify the user to not switch / close the browser tab. Larger transactions are split into chunks in the background and will take longer to sign.
+{% endhint %}
+
+{% hint style="warning" %}
+**Note:** The function uses the default bundler node set by the user or the extension. Consider using the [`signDataItem()`](sign-dataitem.md) function to submit data to a custom bundler.&#x20;
 {% endhint %}
 
 ## Dispatch result

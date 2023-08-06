@@ -2,7 +2,7 @@
 description: Introducing the ArConnect Injected API
 ---
 
-# 📃 Intro
+# Intro
 
 <div data-full-width="false">
 

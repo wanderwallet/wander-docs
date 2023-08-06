@@ -2,7 +2,7 @@
 description: ArConnect Injected API disconnect() function
 ---
 
-# 🚪 Disconnect
+# Disconnect
 
 To end the current ArConnect session for the user, you can disconnect from the extension, using the `disconnect()` function. This removes all permissions from your site and ArConnect will no longer store application and gateway data related to your application. To use the Injected API again, you'll need to [reconnect](connect.md).
 

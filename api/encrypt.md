@@ -2,14 +2,14 @@
 description: ArConnect Injected API encrypt() function
 ---
 
-# 🔐 Encrypt
+# Encrypt
 
 Some applications (such as private file storage apps, mail clients, messaging platforms) might want to upload content to Arweave that is encrypted and only accessible by the user via their private key. The `encrypt()` function does just that: it encrypts data with the active private key and returns the encrypted bytes, similarly to the [webcrypto encrypt API](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt).
 
-| Argument      | Type                                                       | Description                                                                       |
-| ------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `data` | [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), [`TypedArray`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or [`DataView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) | The data to be encrypted with the user's private key |
-| `algorithm` | [`RsaOaepParams`](https://developer.mozilla.org/en-US/docs/Web/API/RsaOaepParams), [`AesCtrParams`](https://developer.mozilla.org/en-US/docs/Web/API/AesCtrParams), [`AesCbcParams`](https://developer.mozilla.org/en-US/docs/Web/API/AesCbcParams) or [`AesGcmParams`](https://developer.mozilla.org/en-US/docs/Web/API/AesGcmParams) | An object specifying the algorithm to be used and any extra parameters if required |
+| Argument    | Type                                                                                                                                                                                                                                                                                                                                     | Description                                                                        |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `data`      | [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/ArrayBuffer), [`TypedArray`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/TypedArray) or [`DataView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/DataView) | The data to be encrypted with the user's private key                               |
+| `algorithm` | [`RsaOaepParams`](https://developer.mozilla.org/en-US/docs/Web/API/RsaOaepParams), [`AesCtrParams`](https://developer.mozilla.org/en-US/docs/Web/API/AesCtrParams), [`AesCbcParams`](https://developer.mozilla.org/en-US/docs/Web/API/AesCbcParams) or [`AesGcmParams`](https://developer.mozilla.org/en-US/docs/Web/API/AesGcmParams)   | An object specifying the algorithm to be used and any extra parameters if required |
 
 {% hint style="info" %}
 **Note:** This function requires the [`ENCRYPT`](connect.md#permissions) permission.

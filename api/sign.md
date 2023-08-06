@@ -2,14 +2,14 @@
 description: ArConnect Injected API sign() function
 ---
 
-# 💳 Sign Transaction
+# Sign Transaction
 
 To submit a transaction to the Arweave Network, it first has to be signed using a private key. The `sign()` function is meant to replicate the behavior of the `transactions.sign()` function of [`arweave-js`](https://github.com/arweaveTeam/arweave-js#sign-a-transaction), but instead of mutating the transaction object, it returns a new and signed transaction instance.
 
-| Argument      | Type                                                       | Description                                                                       |
-| ------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `transaction` | [`Transaction`](https://github.com/arweaveTeam/arweave-js#transactions) | A valid Arweave transaction instance (**without a keyfile**) |
-| `options?` | [`SignatureOptions`](https://github.com/ArweaveTeam/arweave-js/blob/master/src/common/lib/crypto/crypto-interface.ts#L3) | Arweave transaction signature options |
+| Argument      | Type                                                                                                                     | Description                                                  |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
+| `transaction` | [`Transaction`](https://github.com/arweaveTeam/arweave-js#transactions)                                                  | A valid Arweave transaction instance (**without a keyfile**) |
+| `options?`    | [`SignatureOptions`](https://github.com/ArweaveTeam/arweave-js/blob/master/src/common/lib/crypto/crypto-interface.ts#L3) | Arweave transaction signature options                        |
 
 {% hint style="info" %}
 **Note:** This function requires the [`SIGN_TRANSACTION`](connect.md#permissions) permission.

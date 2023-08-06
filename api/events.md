@@ -2,7 +2,7 @@
 description: ArConnect DOM events
 ---
 
-# 🗓 Events
+# Events
 
 ArConnect provides useful custom events to track the state of the extension. These events implement the [`CustomEvent`](https://developer.mozilla.org/en-US/docs/Web/Events/Creating\_and\_triggering\_events#adding\_custom\_data\_%E2%80%93\_customevent) browser API.
 

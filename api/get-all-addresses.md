@@ -2,7 +2,7 @@
 description: ArConnect Injected API getAllAddresses() function
 ---
 
-# 📋 Get All Addresses
+# Get all addresses
 
 ArConnect provides enhanced key management for your Arweave wallets. Because of this, the extension might store more than one wallet and your application can take advantage of that. For example, this feature can make it easier for your app to transfer tokens between the user's addresses. The `getAllAddresses()` function returns an array of addresses added to ArConnect.
 

@@ -2,7 +2,7 @@
 description: Preview for the new version of ArConnect
 ---
 
-# 🧬 Beta
+# Beta
 
 <figure><img src="../.gitbook/assets/Docs-Beta.png" alt=""><figcaption></figcaption></figure>
 
@@ -24,10 +24,10 @@ Internally however, we changed up how the application data is stored, unifying p
 
 ## Major changes
 
-- New design and branding
-- Refactored, scalable and modular codebase that uses [Plasmo](https://plasmo.com) 
-- Internalization (i18n)
-- [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/) support
-- Improved DX (Developer Tooling)
+* New design and branding
+* Refactored, scalable and modular codebase that uses [Plasmo](https://plasmo.com)
+* Internalization (i18n)
+* [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/) support
+* Improved DX (Developer Tooling)
 
 The full changelog can be viewed [here](https://github.com/arconnectio/ArConnect/pull/95).

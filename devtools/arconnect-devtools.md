@@ -2,7 +2,7 @@
 description: Custom devtools tab for easier ArConnect testing
 ---
 
-# 🦔 ArConnect Devtools
+# ArConnect Devtools
 
 <div data-full-width="false">
 
