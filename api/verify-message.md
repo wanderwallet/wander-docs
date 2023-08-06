@@ -22,7 +22,7 @@ This function allows verifying a cryptographic signature [created by ArConnect](
 {% endhint %}
 
 {% hint style="info" %}
-**Note:** The `publicKey` argument is optional, if it is not provided, the extension will use the currently selected wallet's public key.
+**Note:** The `publicKey` argument is optional, if it is not provided, the extension will use the currently selected wallet's public key. You might only need this if the message to be verified was not made by the connected user.
 {% endhint %}
 
 {% hint style="info" %}
