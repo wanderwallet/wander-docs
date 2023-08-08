@@ -8,6 +8,11 @@
 * [ArConnect Devtools](devtools/arconnect-devtools.md)
 * [ArLocal Devtools](devtools/arlocal-devtools.md)
 
+## 📚 External libraries
+* [Arweave Wallet Kit](https://docs.arweavekit.com/wallets/wallet-kit)
+* [arweave-js](https://npmjs.com/arweave)
+* [react-arconnect](https://github.com/decentldotland/react-arconnect)
+
 ## 🔭 Demos
 
 * [Applications](https://arconnect.io/apps)
