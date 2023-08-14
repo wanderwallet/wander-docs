@@ -39,12 +39,8 @@ addEventListener("walletSwitch", (e) => {
 
 ## Event emitter
 
-{% hint style="warning" %}
-**Note:** The event emitter is only available in the [**ArConnect BETA**](../devtools/beta.md).
-{% endhint %}
-
 The event emitter is available under `window.arweaveWallet.events` as a more advanced event system for the extension.
 
 {% hint style="info" %}
-**Note:** This documentation is incomplete.
+**Note:** This documentation is incomplete and the feature is experimental.
 {% endhint %}

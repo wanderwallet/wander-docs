@@ -4,10 +4,6 @@ description: ArConnect Injected API signDataItem() function
 
 # Sign DataItem
 
-{% hint style="warning" %}
-**Note:** The `signDataItem()` function is only available in the [**ArConnect BETA**](../devtools/beta.md).
-{% endhint %}
-
 The signDataItem() function allows you to create and sign a data item object, compatible with [`arbundles`](https://npmjs.com/arbundles). These data items can then be submitted to an [ANS-104](https://github.com/ArweaveTeam/arweave-standards/blob/master/ans/ANS-104.md) compatible bundler.
 
 | Argument   | Type                                     | Description                   |

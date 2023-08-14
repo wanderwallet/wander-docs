@@ -5,7 +5,7 @@ description: ArConnect Injected API signature() function
 # Crypto signature
 
 {% hint style="danger" %}
-**Deprecation warning:** The `signature()` function will be deprecated in ArConnect 1.0.0. Read about the alternatives below.
+**Deprecation warning:** The `signature()` function is deprecated in ArConnect 1.0.0. Read about the alternatives below.
 {% endhint %}
 
 ## Alternatives

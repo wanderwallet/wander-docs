@@ -4,7 +4,6 @@
 
 ## ⛏ Developer tooling
 
-* [Beta](devtools/beta.md)
 * [ArConnect Devtools](devtools/arconnect-devtools.md)
 * [ArLocal Devtools](devtools/arlocal-devtools.md)
 

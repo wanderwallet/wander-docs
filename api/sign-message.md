@@ -4,10 +4,6 @@ description: ArConnect Injected API signMessage() function
 
 # Sign message
 
-{% hint style="warning" %}
-**Note:** The `signMessage()` function is only available in the [**ArConnect BETA**](../devtools/beta.md).
-{% endhint %}
-
 This function allows creating a cryptographic signature for any piece of data for later validation.
 
 | Argument   | Type                                            | Description                            |

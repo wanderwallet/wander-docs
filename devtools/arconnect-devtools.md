@@ -12,10 +12,6 @@ description: Custom devtools tab for easier ArConnect testing
 
 The ArConnect devtools allows you to easily connect your application to the extension and manage its settings.
 
-{% hint style="warning" %}
-**Note:** ArConnect Devtools is only available in the [**ArConnect BETA**](beta.md).
-{% endhint %}
-
 ## Connect
 
 Upon startup, you'll be able to connect your app. You can select what permissions you want to allow the app to have. Once you selected the permissions you want, click _Force Connect_.

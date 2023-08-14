@@ -4,10 +4,6 @@ description: ArConnect Injected API privateHash() function
 
 # Private hash
 
-{% hint style="warning" %}
-**Note:** The`privateHash()` function is only available in the [**ArConnect BETA**](../devtools/beta.md).
-{% endhint %}
-
 The `privateHash()` function allows you to create deterministic secrets (hashes) from some data.
 
 | Argument  | Type                                            | Description                |

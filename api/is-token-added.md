@@ -4,10 +4,6 @@ description: ArConnect Injected API isTokenAdded() function
 
 # Check token added
 
-{% hint style="warning" %}
-**Note:** The `isTokenAdded()` function is only available in the [**ArConnect BETA**](../devtools/beta.md).
-{% endhint %}
-
 When trying to [add a token](add-token.md), it can be useful to know if a token has already been added to ArConnect. The `isTokenAdded()` function returns a boolean indicating whether the token with the supplied ID has been added to the extension or not.
 
 | Argument | Type     | Description                  |

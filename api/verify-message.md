@@ -4,10 +4,6 @@ description: ArConnect Injected API verifyMessage() function
 
 # Verify message
 
-{% hint style="warning" %}
-**Note:** The `signMessage()` function is only available in the [**ArConnect BETA**](../devtools/beta.md).
-{% endhint %}
-
 This function allows verifying a cryptographic signature [created by ArConnect](sign-message.md).
 
 | Argument     | Type                                            | Description                                                                                                     |
