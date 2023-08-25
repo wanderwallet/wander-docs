@@ -29,7 +29,7 @@ To submit a transaction to the Arweave Network, it first has to be signed using 
 
 ## Example usage
 
-### With `arweave-js`
+### With `arweave-js` (recommended)
 
 ```ts
 import Arweave from "arweave";
