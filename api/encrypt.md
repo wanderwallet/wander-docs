@@ -17,6 +17,21 @@ Some applications (such as private file storage apps, mail clients, messaging pl
 
 ## Example usage
 
+```typescript
+// connect to the extension
+await window.arweaveWallet.connect(["ENCRYPT"]);
+
+// encrypt data using RSA-OAEP
+const encrypted = await arweaveWallet.encrypt(
+    new TextEncoder().encode("This message will be encrypted"),
+    { name: "RSA-OAEP" }
+);
+
+console.log("Encrypted bytes:", encrypted);
+```
+
+### Old (deprecated) usage
+
 ```ts
 // connect to the extension
 await window.arweaveWallet.connect(["ENCRYPT"]);

@@ -17,6 +17,33 @@ Data [encrypted with the user's wallet](encrypt.md) should be accessible by the 
 
 ## Example usage
 
+```typescript
+// connect to the extension
+await window.arweaveWallet.connect(["ENCRYPT", "DECRYPT"]);
+
+// encrypt data using RSA-OAEP
+const encrypted = await arweaveWallet.encrypt(
+    new TextEncoder().encode("This message will be encrypted"),
+    { name: "RSA-OAEP" }
+);
+
+console.log("Encrypted bytes:", encrypted);
+
+// now decrypt the same data using
+// the same algorithm
+const decrypted = await arweaveWallet.decrypt(
+    encrypted,
+    { name: "RSA-OAEP" }
+);
+
+console.log(
+    "Decrypted data:",
+    new TextDecoder().decode(decrypted)
+);
+```
+
+### Old (deprecated) usage
+
 ```ts
 // connect to the extension
 await window.arweaveWallet.connect(["ENCRYPT", "DECRYPT"]);
