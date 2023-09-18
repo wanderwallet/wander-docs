@@ -57,7 +57,7 @@ const encrypted = await window.arweaveWallet.encrypt(
   }
 );
 
-console.log("Encrypted bytes", encrypted);
+console.log("Encrypted bytes:", encrypted);
 
 // decrypt data
 const decrypted = await window.arweaveWallet.decrypt(
@@ -68,5 +68,5 @@ const decrypted = await window.arweaveWallet.decrypt(
   }
 );
 
-console.log("Decrypted data", decrypted);
+console.log("Decrypted data:", new TextDecoder().decode(decrypted));
 ```
