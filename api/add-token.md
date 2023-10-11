@@ -6,11 +6,11 @@ description: ArConnect Injected API addToken() function
 
 In the new ArConnect version, the extension only shows tokens that the user has added. Tokens can be added via the `addToken()` function, after the user has approved it.
 
-| Argument   | Type                                          | Description                                                             |
-| ---------- | --------------------------------------------- | ----------------------------------------------------------------------- |
-| `id`       | `string`                                      | The contract ID of the token to add to ArConnect                        |
-| `type?`    | `"asset"` or `"collectible"`                  | Type of the token (determinates how it'll be displayed)                 |
-| `gateway?` | [`Gateway`](connect.md#custom-gateway-config) | Custom gateway config for the token (balance will be loaded from there) |
+| Argument | Type                         | Description                                             |
+| -------- | ---------------------------- | ------------------------------------------------------- |
+| `id`     | `string`                     | The contract ID of the token to add to ArConnect        |
+| `type?`  | `"asset"` or `"collectible"` | Type of the token (determinates how it'll be displayed) |
+| `dre?`   | `string`                     | Custom DRE node (url) to load the token state with      |
 
 {% hint style="info" %}
 **Note:** This function does not require any permissions or the app to be connected to ArConnect.
@@ -21,7 +21,7 @@ In the new ArConnect version, the extension only shows tokens that the user has 
 {% endhint %}
 
 {% hint style="info" %}
-**Note:** The `gateway` argument is optional, if it is not provided, the extension will use the default `arweave.net` gateway for the executed API. functions
+**Note:** The `dre` argument is optional, if it is not provided, the extension will find an appropriate DRE node from a pre-determined list of nodes. This DRE node will also automatically change, should the provided node no longer return the state of the token.
 {% endhint %}
 
 {% hint style="info" %}
@@ -40,14 +40,10 @@ await window.arweaveWallet.addToken(
   "collectible"
 );
 
-// add a token with a custom gateway
+// add a token with a custom dre node
 await window.arweaveWallet.addToken(
   "rjyDN_VlSl4b_Cqn6nfE6tMMZhTJq0RGMFxGhvsefMc",
   "collectible",
-  {
-    host: "g8way.io",
-    port: 443,
-    protocol: "https"
-  }
+  "https://dre-4.warp.cc"
 );
 ```
