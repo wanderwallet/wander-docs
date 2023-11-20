@@ -32,7 +32,7 @@ ArConnect requires specific permissions from the user for each interaction that 
 | `SIGN_TRANSACTION`      | Allow the app to sign an Arweave transaction (Base layer)               |
 | `ENCRYPT`               | Enable the app to encrypt data with the user's wallet through ArConnect |
 | `DECRYPT`               | Allow the app to decrypt data encrypted with the user's wallet          |
-| `SIGNATURE`             | Allow the app to sign messages with the user's wallet thorugh ArConnect |
+| `SIGNATURE`             | Allow the app to sign messages with the user's wallet through ArConnect |
 | `ACCESS_ARWEAVE_CONFIG` | Enable the app to access the current gateway config                     |
 | `DISPATCH`              | Allow the app to dispatch a transaction (bundle or base layer)          |
 
