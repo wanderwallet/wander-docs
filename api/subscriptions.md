@@ -56,5 +56,5 @@ const subscription = await window.arweaveWallet.subscription({
 });
 
 // Subscription will output the details and the initial payment txn
-console.log("Subscription details with initial payment txn:", subscription);
+console.log("Subscription details with paymentHistory array:", subscription);
 ```
