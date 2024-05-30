@@ -29,7 +29,6 @@ Recurring Payment Frequency
 
 ```typescript
 export enum RecurringPaymentFrequency {
-  ANNUALLY = "Annually",
   QUARTERLY = "Quarterly",
   MONTHLY = "Monthly",
   WEEKLY = "Weekly",
