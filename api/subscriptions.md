@@ -42,7 +42,7 @@ export enum RecurringPaymentFrequency {
 // connect to the extension
 await window.arweaveWallet.connect(["ACCESS_ALL_ADDRESSES"]);
 
-// sign the data item
+// submit the subscription information
 const subscription = await window.arweaveWallet.subscription({
   arweaveAccountAddress: "hY70z-mbKfDByqXh4y43ybSxReFVo1i9lB1dDdCkO_U",
   applicationName: "ArConnect",
