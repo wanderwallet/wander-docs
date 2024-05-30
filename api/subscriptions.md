@@ -4,7 +4,7 @@ description: ArConnect Injected API subscription() function
 
 # Subscriptions
 
-Subscriptions is a feature that allows users to subscribe to applications and be charged on a periodic basis such as monthly, weekly, or yearly. Users will be charged the moment they subscribe
+Subscriptions is a feature that allows users to subscribe to applications and be charged on a periodic basis such as monthly, weekly, or quarterly. Users will be charged the moment they subscribe
 
 | Argument                    | Type                                                                        | Description                                              |
 | --------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------- |
