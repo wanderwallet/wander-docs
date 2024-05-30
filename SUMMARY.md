@@ -37,6 +37,7 @@
 * [Encrypt](api/encrypt.md)
 * [Decrypt](api/decrypt.md)
 * [Crypto signature](api/signature.md)
+* [Subscriptions](api/subscriptions.md)
 * [Retrive permissions](api/get-permissions.md)
 * [Retrive Gateway Config](api/get-arweave-config.md)
 
