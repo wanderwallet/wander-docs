@@ -28,7 +28,7 @@ ArConnect requires specific permissions from the user for each interaction that 
 | ----------------------- | ----------------------------------------------------------------------- |
 | `ACCESS_ADDRESS`        | Allow the app to get the active wallet's address                        |
 | `ACCESS_PUBLIC_KEY`     | Enable the app to access the active wallet's public key                 |
-| `ACCESS_ALL_ADDRESSES`  | Enable the app to access the active wallet's public key                 |
+| `ACCESS_ALL_ADDRESSES`  | Enable the app to access all wallet addresses added to ArConnect        |
 | `SIGN_TRANSACTION`      | Allow the app to sign an Arweave transaction (Base layer)               |
 | `ENCRYPT`               | Enable the app to encrypt data with the user's wallet through ArConnect |
 | `DECRYPT`               | Allow the app to decrypt data encrypted with the user's wallet          |
