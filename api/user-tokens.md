@@ -39,7 +39,7 @@ export type UserTokensResult = Array<{
   Logo?: string;
   Denomination: number;
   processId: string;
-  balance?: string;
+  balance?: string | null;
 }>
 ```
 
