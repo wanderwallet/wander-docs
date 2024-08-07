@@ -20,7 +20,7 @@ Some applications will request to access tokens added to your wallet and the bal
 
 ## Options
 
-Currently ArConnect allows you to customize the hash algorithm (`SHA-256` by default):
+Currently ArConnect allows you to customize the balance fetching behavior (`false` by default):
 
 ```typescript
 export interface UserTokenOtions {
@@ -31,6 +31,9 @@ export interface UserTokenOtions {
 ## Example usage
 
 ```ts
+// connect to the extension
+await window.arweaveWallet.connect(["ACCESS_TOKENS"])
+
 // get user tokens
 await window.arweaveWallet.userTokens();
 
