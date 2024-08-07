@@ -23,7 +23,7 @@ Some applications will request to access tokens added to your wallet and the bal
 Currently ArConnect allows you to customize the balance fetching behavior (`false` by default):
 
 ```typescript
-export interface UserTokenOtions {
+export interface UserTokensOptions {
   fetchBalance?: boolean;
 }
 ```
