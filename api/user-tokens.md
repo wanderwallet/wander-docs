@@ -30,7 +30,7 @@ export interface UserTokensOptions {
 
 ## Result
 
-The `userTokens()` function returns an array of token information objects. If the `fetchBalance` option is set to `true`, each token object will include its balance. The `balance` property of each token object may be `null` if there is an issue retrieving it.
+The `userTokens()` function returns an array of token information objects. If the `fetchBalance` option is set to `true`, each token object will include its balance. The `balance` property of the token object may be `null` if there is an issue retrieving it.
 
 ```typescript
 export type UserTokensResult = Array<{
@@ -46,12 +46,14 @@ export type UserTokensResult = Array<{
 ## Example usage
 
 ```ts
-// connect to the extension
-await window.arweaveWallet.connect(["ACCESS_TOKENS"])
+// Connect to the extension and request access to the ACCESS_TOKENS permission
+await window.arweaveWallet.connect(["ACCESS_TOKENS"]);
 
-// get user tokens
-await window.arweaveWallet.userTokens();
+// Retrieve the list of tokens owned by the user
+const tokens = await window.arweaveWallet.userTokens();
+console.log("Tokens owned by the user:", tokens);
 
-// include balance
-await window.arweaveWallet.userTokens({ fetchBalance: true });
+// Retrieve the list of tokens owned by the user, including their balances
+const tokensWithBalances = await window.arweaveWallet.userTokens({ fetchBalance: true });
+console.log("Tokens with their balances:", tokensWithBalances);
 ```
