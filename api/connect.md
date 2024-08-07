@@ -24,17 +24,18 @@ To use the different functionalities the ArConnect API provides, you need to req
 
 ArConnect requires specific permissions from the user for each interaction that involves the usage of their wallet.
 
-| Permission              | Description                                                             |
-| ----------------------- | ----------------------------------------------------------------------- |
-| `ACCESS_ADDRESS`        | Allow the app to get the active wallet's address                        |
-| `ACCESS_PUBLIC_KEY`     | Enable the app to access the active wallet's public key                 |
-| `ACCESS_ALL_ADDRESSES`  | Enable the app to access all wallet addresses added to ArConnect        |
-| `SIGN_TRANSACTION`      | Allow the app to sign an Arweave transaction (Base layer)               |
-| `ENCRYPT`               | Enable the app to encrypt data with the user's wallet through ArConnect |
-| `DECRYPT`               | Allow the app to decrypt data encrypted with the user's wallet          |
-| `SIGNATURE`             | Allow the app to sign messages with the user's wallet through ArConnect |
-| `ACCESS_ARWEAVE_CONFIG` | Enable the app to access the current gateway config                     |
-| `DISPATCH`              | Allow the app to dispatch a transaction (bundle or base layer)          |
+| Permission              | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
+| `ACCESS_ADDRESS`        | Allow the app to get the active wallet's address                         |
+| `ACCESS_PUBLIC_KEY`     | Enable the app to access the active wallet's public key                  |
+| `ACCESS_ALL_ADDRESSES`  | Enable the app to access all wallet addresses added to ArConnect         |
+| `SIGN_TRANSACTION`      | Allow the app to sign an Arweave transaction (Base layer)                |
+| `ENCRYPT`               | Enable the app to encrypt data with the user's wallet through ArConnect  |
+| `DECRYPT`               | Allow the app to decrypt data encrypted with the user's wallet           |
+| `SIGNATURE`             | Allow the app to sign messages with the user's wallet through ArConnect  |
+| `ACCESS_ARWEAVE_CONFIG` | Enable the app to access the current gateway config                      |
+| `DISPATCH`              | Allow the app to dispatch a transaction (bundle or base layer)           |
+| `ACCESS_TOKENS`         | Allow the app to access all tokens and token balances added in ArConnect |
 
 ## Additional application information
 
@@ -69,13 +70,13 @@ await window.arweaveWallet.connect(
   // provide some extra info for our app
   {
     name: "Super Cool App",
-    logo: "https://arweave.net/jAvd7Z1CBd8gVF2D6ESj7SMCCUYxDX_z3vpp5aHdaYk"
+    logo: "https://arweave.net/jAvd7Z1CBd8gVF2D6ESj7SMCCUYxDX_z3vpp5aHdaYk",
   },
   // custom gateway
   {
     host: "g8way.io",
     port: 443,
-    protocol: "https"
+    protocol: "https",
   }
 );
 ```
