@@ -30,7 +30,7 @@ export interface UserTokensOptions {
 
 ## Result
 
-The `userTokens()` function returns an array of token information objects. Each object includes details about the token, and the balance is included if the `fetchBalance` option is set to `true`.
+The `userTokens()` function returns an array of token information objects. If the `fetchBalance` option is set to `true`, each token object will include its balance. The `balance` property of each token object may be `null` if there is an issue retrieving it.
 
 ```typescript
 export type UserTokensResult = Array<{
