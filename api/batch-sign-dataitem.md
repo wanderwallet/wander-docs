@@ -73,7 +73,7 @@ const dataItems = signed.map((buffer) => new DataItem(buffer));
 
 // now you can submit them to a bundler
 for (const dataItem of dataItems) {
-  await fetch(`https://node2.bundlr.network/tx`, {
+  await fetch(`https://upload.ardrive.io/v1/tx`, {
     method: "POST",
     headers: {
       "Content-Type": "application/octet-stream",
