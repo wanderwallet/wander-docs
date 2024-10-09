@@ -24,13 +24,13 @@ This function requires a valid data item object, like so:
 
 ```typescript
 export interface DataItem {
-    data: string | Uint8Array;
-    target?: string;
-    anchor?: string;
-    tags?: {
-        name: string;
-        value: string;
-    }[];
+  data: string | Uint8Array;
+  target?: string;
+  anchor?: string;
+  tags?: {
+    name: string;
+    value: string;
+  }[];
 }
 ```
 
@@ -44,22 +44,24 @@ await window.arweaveWallet.connect(["SIGN_TRANSACTION"]);
 
 // sign the data item
 const signed = await window.arweaveWallet.signDataItem({
-    data: "This is an example data",
-    tags: [{
-        name: "Content-Type",
-        value: "text/plain"
-    }]
+  data: "This is an example data",
+  tags: [
+    {
+      name: "Content-Type",
+      value: "text/plain",
+    },
+  ],
 });
 
 // load the result into a DataItem instance
 const dataItem = new DataItem(signed);
 
 // now you can submit it to a bunder
-await fetch(`https://node2.bundlr.network/tx`, {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/octet-stream"
-    },
-    body: dataItem.getRaw()
+await fetch(`https://upload.ardrive.io/v1/tx`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/octet-stream",
+  },
+  body: dataItem.getRaw(),
 });
 ```
