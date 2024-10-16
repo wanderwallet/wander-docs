@@ -16,7 +16,11 @@ Some applications may request access to the balance of a specific token in your 
 
 ## Result
 
-The `tokenBalance()` function returns the balance of the requested token as a string. If there is an issue retrieving the balance, an error may be thrown.
+The `tokenBalance()` function returns the balance of the requested token as a string.
+
+{% hint style="warning" %}
+**Note**: This function throws an error if there is an issue retrieving the balance. Please make sure to handle such cases in your code.
+{% endhint %}
 
 ```typescript
 export type TokenBalanceResult = string;
