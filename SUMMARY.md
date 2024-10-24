@@ -35,6 +35,7 @@
 - [Verify message](api/verify-message.md)
 - [Private hash](api/private-hash.md)
 - [User Tokens](api/user-tokens.md)
+- [Token Balance](api/token-balance.md)
 - [Encrypt](api/encrypt.md)
 - [Decrypt](api/decrypt.md)
 - [Crypto signature](api/signature.md)
