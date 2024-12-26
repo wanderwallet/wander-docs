@@ -12,7 +12,7 @@ This function allows creating a cryptographic signature for any piece of data fo
 | `options?` | [`SignMessageOptions`](sign-message.md#options) | Configuration for the signature        |
 
 {% hint style="info" %}
-**Note:** This function requires the [`SIGNATURE`](sign.md) permission.
+**Note:** This function requires the [`SIGNATURE`](connect.md#permissions) permission.
 {% endhint %}
 
 {% hint style="warning" %}

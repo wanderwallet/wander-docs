@@ -11,7 +11,7 @@ The signDataItem() function allows you to create and sign a data item object, co
 | `dataItem` | [`DataItem`](sign-dataitem.md#data-item) | The bundled data item to sign |
 
 {% hint style="info" %}
-**Note:** This function requires the [`SIGN_TRANSACTION`](sign.md) permission.
+**Note:** This function requires the [`SIGN_TRANSACTION`](connect.md#permissions) permission.
 {% endhint %}
 
 {% hint style="warning" %}
