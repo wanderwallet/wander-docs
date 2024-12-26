@@ -11,7 +11,7 @@ The batchSignDataItem() function allows you to create and sign an array of data 
 | `dataItems` | [`DataItem[]`](batch-sign-dataitem.md#data-item) | An array of data items to sign |
 
 {% hint style="info" %}
-**Note:** This function requires the [`SIGN_TRANSACTION`](sign.md) permission.
+**Note:** This function requires the [`SIGN_TRANSACTION`](connect.md#permissions) permission.
 {% endhint %}
 
 {% hint style="warning" %}

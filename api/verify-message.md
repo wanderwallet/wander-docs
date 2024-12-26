@@ -14,7 +14,7 @@ This function allows verifying a cryptographic signature [created by ArConnect](
 | `options?`   | [`SignMessageOptions`](sign-message.md#options) | Configuration for the signature                                                                                 |
 
 {% hint style="info" %}
-**Note:** This function requires the [`SIGNATURE`](sign.md) permission.
+**Note:** This function requires the [`SIGNATURE`](connect.md#permissions) permission.
 {% endhint %}
 
 {% hint style="info" %}

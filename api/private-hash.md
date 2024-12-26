@@ -12,7 +12,7 @@ The `privateHash()` function allows you to create deterministic secrets (hashes)
 | `options` | [`SignMessageOptions`](sign-message.md#options) | Configuration for the hash |
 
 {% hint style="info" %}
-**Note:** This function requires the [`SIGNATURE`](sign.md) permission.
+**Note:** This function requires the [`SIGNATURE`](connect.md#permissions) permission.
 {% endhint %}
 
 ## Example usage
