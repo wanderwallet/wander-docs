@@ -1,10 +1,10 @@
 ---
-description: ArConnect Injected API getAllAddresses() function
+description: Wander Injected API getAllAddresses() function
 ---
 
 # Get all addresses
 
-ArConnect provides enhanced key management for your Arweave wallets. Because of this, the extension might store more than one wallet and your application can take advantage of that. For example, this feature can make it easier for your app to transfer tokens between the user's addresses. The `getAllAddresses()` function returns an array of addresses added to ArConnect.
+Wander provides enhanced key management for your Arweave wallets. Because of this, the extension might store more than one wallet and your application can take advantage of that. For example, this feature can make it easier for your app to transfer tokens between the user's addresses. The `getAllAddresses()` function returns an array of addresses added to Wander.
 
 {% hint style="info" %}
 **Note:** This function requires the [`ACCESS_ALL_ADDRESSES`](connect.md#permissions) permission.

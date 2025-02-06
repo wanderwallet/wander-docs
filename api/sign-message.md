@@ -1,5 +1,5 @@
 ---
-description: ArConnect Injected API signMessage() function
+description: Wander Injected API signMessage() function
 ---
 
 # Sign message
@@ -29,7 +29,7 @@ This function allows creating a cryptographic signature for any piece of data fo
 
 ## Options
 
-Currently ArConnect allows you to customize the hash algorithm (`SHA-256` by default):
+Currently Wander allows you to customize the hash algorithm (`SHA-256` by default):
 
 ```typescript
 export interface SignMessageOptions {
@@ -55,11 +55,15 @@ const isValidSignature = await window.arweaveWallet.verifyMessage(data, signatur
 console.log(`The signature is ${isValidSignature ? "valid" : "invalid"}`);
 ```
 
-## Verification without ArConnect
+## Verification without Wander
 
-You might encounter situations where you need to verify the signed message against an ArConnect generated signature, but the extension is not accessible or not installed (for e.g.: server side code, unsupported browser, etc.).
+You might encounter situations where you need to verify the signed message against an Wander generated signature, but the extension is not accessible or not installed (for e.g.: server side code, unsupported browser, etc.).
 
-In these cases it is possible to validate the signature by hashing the message (with the algorithm you used when generating the signature through ArConnect) and verifying that against the ArConnect signature. This requires the message to be verified, the signature and the [wallet's public key](get-active-public-key.md). Below is the JavaScript (TypeScript) example implementation with the [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web\_Crypto\_API), using `SHA-256` hashing:
+In these cases it is possible to validate the signature by hashing the message (with the algorithm you used when generating the signature through Wander) and verifying that against the Wander signature. This requires the message to be verified, the signature and the [wallet's public key](get-active-public-key.md). Below is the JavaScript (TypeScript) example implementation with the [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API), using `SHA-256` hashing:
+
+{% hint style="info" %}
+_Wander was formerly know as ArConnect.  There are some API references that still use ArConnect_
+{% endhint %}
 
 ```typescript
 // connect to the extension
@@ -84,7 +88,7 @@ const publicJWK: JsonWebKey = {
     kty: "RSA",
     // !! You need to obtain this on your own !!
     // possible ways are: 
-    // - getting from ArConnect if available
+    // - getting from Wander if available
     // - storing it beforehand
     // - if the wallet has made any transactions on the Arweave network
     //   the public key is going to be the owner field of the mentioned

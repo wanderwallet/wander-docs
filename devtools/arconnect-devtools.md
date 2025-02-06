@@ -1,16 +1,12 @@
 ---
-description: Custom devtools tab for easier ArConnect testing
+description: Custom devtools tab for easier Wander testing
 ---
 
-# ArConnect Devtools
+# Wander Devtools
 
-<div data-full-width="false">
+<div data-full-width="false"><figure><img src="../.gitbook/assets/Docs-Devtools (1).png" alt=""><figcaption></figcaption></figure></div>
 
-<figure><img src="../.gitbook/assets/Docs-Devtools.png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-The ArConnect devtools allows you to easily connect your application to the extension and manage its settings.
+The Wander devtools allows you to easily connect your application to Wander and manage its settings.
 
 ## Connect
 
@@ -20,11 +16,13 @@ Upon startup, you'll be able to connect your app. You can select what permission
 
 The following settings are available at a glance for your app:
 
-* Permissions \
+* Permissions\
   Manage permissions for your application quickly.
-* Allowance \
+* Allowance\
   Manage spending allowance for your app
-* Gateway \
+* Gateway\
   Select from suggested gateways or enter a custom one
-* Bundlr node \
-  Set the Bundlr node your app uses when calling [`dispatch()`](../api/dispatch.md)
+*   Bundler node\
+    Set the bundler node your app uses when calling [`dispatch()`](../api/dispatch.md) .
+
+    Turbo is the default bundler node

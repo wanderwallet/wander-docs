@@ -4,7 +4,7 @@ description: ArConnect Injected API getActivePublicKey() function
 
 # Get active public key
 
-This function allows you to get the public key of the currently active wallet in ArConnect.
+This function allows you to get the public key of the currently active wallet in Wander.
 
 {% hint style="info" %}
 **Note:** This function requires the [`ACCESS_PUBLIC_KEY`](connect.md#permissions) permission.

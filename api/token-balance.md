@@ -1,14 +1,14 @@
 ---
-description: ArConnect Injected API tokenBalance() function
+description: Wander Injected API tokenBalance() function
 ---
 
-# Token balance
+# Token Balance
 
 Some applications may request access to the balance of a specific token in your wallet. The `tokenBalance()` function returns the balance of the token identified by its ID.
 
-| Argument   | Type                                          | Description                             |
-| ---------- | --------------------------------------------- | --------------------------------------- |
-| `id` | string | The unique identifier (processId) of the token |
+| Argument | Type   | Description                                    |
+| -------- | ------ | ---------------------------------------------- |
+| `id`     | string | The unique identifier (processId) of the token |
 
 {% hint style="info" %}
 **Note:** This function requires the [`ACCESS_TOKENS`](connect.md#permissions) permission.

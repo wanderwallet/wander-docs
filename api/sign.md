@@ -1,5 +1,5 @@
 ---
-description: ArConnect Injected API sign() function
+description: Wander Injected API sign() function
 ---
 
 # Sign Transaction
@@ -20,7 +20,7 @@ To submit a transaction to the Arweave Network, it first has to be signed using 
 {% endhint %}
 
 {% hint style="warning" %}
-**Tip:** A better alternative to this function is using the [`arweave-js`](https://github.com/arweaveTeam/arweave-js#sign-a-transaction) `transactions.sign()` instead. Just omit the second parameter (`JWK` key) when calling the method, and [`arweave-js`](https://github.com/arweaveTeam/arweave-js#sign-a-transaction) will automatically use ArConnect.
+**Tip:** A better alternative to this function is using the [`arweave-js`](https://github.com/arweaveTeam/arweave-js#sign-a-transaction) `transactions.sign()` instead. Just omit the second parameter (`JWK` key) when calling the method, and [`arweave-js`](https://github.com/arweaveTeam/arweave-js#sign-a-transaction) will automatically use Wander.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -46,7 +46,7 @@ await window.arweaveWallet.connect(["SIGN_TRANSACTION"]);
 
 // create a transaction
 const transaction = await arweave.createTransaction({
-  data: '<html><head><meta charset="UTF-8"><title>Hello permanent world! This was signed via ArConnect!!!</title></head><body></body></html>'
+  data: '<html><head><meta charset="UTF-8"><title>Hello permanent world! This was signed via Wander!!!</title></head><body></body></html>'
 });
 
 // sign using arweave-js
@@ -55,7 +55,7 @@ await arweave.transactions.sign(transaction);
 // TODO: post the transaction to the network
 ```
 
-### Directly using ArConnect
+### Directly using Wander
 
 ```ts
 import Arweave from "arweave";
@@ -72,7 +72,7 @@ await window.arweaveWallet.connect(["SIGN_TRANSACTION"]);
 
 // create a transaction
 let transaction = await arweave.createTransaction({
-  data: '<html><head><meta charset="UTF-8"><title>Hello permanent world! This was signed via ArConnect!!!</title></head><body></body></html>'
+  data: '<html><head><meta charset="UTF-8"><title>Hello permanent world! This was signed via Wander!!!</title></head><body></body></html>'
 });
 
 // sign using arweave-js

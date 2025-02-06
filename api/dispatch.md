@@ -1,5 +1,5 @@
 ---
-description: ArConnect Injected API dispatch() function
+description: Wander Injected API dispatch() function
 ---
 
 # Dispatch Transaction
@@ -50,7 +50,7 @@ await window.arweaveWallet.connect(["DISPATCH"]);
 
 // create a transaction
 const transaction = await arweave.createTransaction({
-  data: '<html><head><meta charset="UTF-8"><title>Hello permanent world! This was signed via ArConnect!!!</title></head><body></body></html>'
+  data: '<html><head><meta charset="UTF-8"><title>Hello permanent world! This was signed via Wander!!!</title></head><body></body></html>'
 });
 
 // dispatch the tx

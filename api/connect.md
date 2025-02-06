@@ -1,10 +1,10 @@
 ---
-description: ArConnect Injected API connect() function
+description: Wander Injected API connect() function
 ---
 
 # Connect
 
-To use the different functionalities the ArConnect API provides, you need to request permissions from the user to interact with their wallets. Each API function has their own permission(s), which can be requested at any time with the `connect()` function.
+To use the different functionalities the Wander API provides, you need to request permissions from the user to interact with their wallets. Each API function has their own permission(s), which can be requested at any time with the `connect()` function.
 
 | Argument      | Type                                                       | Description                                                                       |
 | ------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -22,20 +22,20 @@ To use the different functionalities the ArConnect API provides, you need to req
 
 ## Permissions
 
-ArConnect requires specific permissions from the user for each interaction that involves the usage of their wallet.
+Wander requires specific permissions from the user for each interaction that involves the usage of their wallet.
 
-| Permission              | Description                                                              |
-| ----------------------- | ------------------------------------------------------------------------ |
-| `ACCESS_ADDRESS`        | Allow the app to get the active wallet's address                         |
-| `ACCESS_PUBLIC_KEY`     | Enable the app to access the active wallet's public key                  |
-| `ACCESS_ALL_ADDRESSES`  | Enable the app to access all wallet addresses added to ArConnect         |
-| `SIGN_TRANSACTION`      | Allow the app to sign an Arweave transaction (Base layer)                |
-| `ENCRYPT`               | Enable the app to encrypt data with the user's wallet through ArConnect  |
-| `DECRYPT`               | Allow the app to decrypt data encrypted with the user's wallet           |
-| `SIGNATURE`             | Allow the app to sign messages with the user's wallet through ArConnect  |
-| `ACCESS_ARWEAVE_CONFIG` | Enable the app to access the current gateway config                      |
-| `DISPATCH`              | Allow the app to dispatch a transaction (bundle or base layer)           |
-| `ACCESS_TOKENS`         | Allow the app to access all tokens and token balances added in ArConnect |
+| Permission              | Description                                                           |
+| ----------------------- | --------------------------------------------------------------------- |
+| `ACCESS_ADDRESS`        | Allow the app to get the active wallet's address                      |
+| `ACCESS_PUBLIC_KEY`     | Enable the app to access the active wallet's public key               |
+| `ACCESS_ALL_ADDRESSES`  | Enable the app to access all wallet addresses added to Wander         |
+| `SIGN_TRANSACTION`      | Allow the app to sign an Arweave transaction (Base layer)             |
+| `ENCRYPT`               | Enable the app to encrypt data with the user's wallet through Wander  |
+| `DECRYPT`               | Allow the app to decrypt data encrypted with the user's wallet        |
+| `SIGNATURE`             | Allow the app to sign messages with the user's wallet through Wander  |
+| `ACCESS_ARWEAVE_CONFIG` | Enable the app to access the current gateway config                   |
+| `DISPATCH`              | Allow the app to dispatch a transaction (bundle or base layer)        |
+| `ACCESS_TOKENS`         | Allow the app to access all tokens and token balances added in Wander |
 
 ## Additional application information
 
@@ -50,7 +50,7 @@ interface AppInfo {
 
 ## Custom gateway config
 
-If your application requires the usage of a special gateway or you want to test with an [ArLocal](https://github.com/textury/arlocal) testnet gateway, you'll have to provide some information about these when connecting to ArConnect.
+If your application requires the usage of a special gateway or you want to test with an [ArLocal](https://github.com/textury/arlocal) testnet gateway, you'll have to provide some information about these when connecting to Wander.
 
 ```ts
 interface Gateway {

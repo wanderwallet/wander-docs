@@ -1,10 +1,10 @@
 ---
-description: ArConnect Injected API getWalletNames() function
+description: Wander Injected API getWalletNames() function
 ---
 
 # Get wallet names
 
-In ArConnect, each wallet has a nickname. This is either the user's [ANS](https://ans.gg) name, or a user-given nickname. To provide better UX, you can retrive these names and display them for the user, so they can easily recognize which wallet they're using. The `getWalletNames()` function returns an object, where the object keys are the wallet addresses and the values are the nicknames.
+In Wander, each wallet has a nickname. This is either the user's [ArNS](https://arns.app/) name, or a user-given nickname. To provide better UX, you can retrive these names and display them for the user, so they can easily recognize which wallet they're using. The `getWalletNames()` function returns an object, where the object keys are the wallet addresses and the values are the nicknames.
 
 {% hint style="info" %}
 **Note:** This function requires the [`ACCESS_ALL_ADDRESSES`](connect.md#permissions) permission.
@@ -16,7 +16,7 @@ In ArConnect, each wallet has a nickname. This is either the user's [ANS](https:
 // connect to the extension
 await window.arweaveWallet.connect(["ACCESS_ADDRESS", "ACCESS_ALL_ADDRESSES"]);
 
-// get all wallet names from ArConnect
+// get all wallet names from Wander
 const walletNames = await window.arweaveWallet.getWalletNames();
 
 // obtain the user's active wallet address

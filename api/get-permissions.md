@@ -1,10 +1,10 @@
 ---
-description: ArConnect Injected API getPermissions() function
+description: Wander Injected API getPermissions() function
 ---
 
 # Retrive permissions
 
-As discussed [here](connect.md#permissions), ArConnect requires a specific type of permission for each API function that involves an action with the user's wallet. It is important for an application to be aware of the permissions given to them by the user. The `getPermissions()` function returns an array of permissions given to the current application. If the array is empty, it means that the app has not yet connected to the extension.
+As discussed [here](connect.md#permissions), Wander requires a specific type of permission for each API function that involves an action with the user's wallet. It is important for an application to be aware of the permissions given to them by the user. The `getPermissions()` function returns an array of permissions given to the current application. If the array is empty, it means that the app has not yet connected to the extension.
 
 ## Example usage
 
