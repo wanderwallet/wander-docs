@@ -1,20 +1,16 @@
 ---
-description: Introducing the ArConnect Injected API
+description: Introducing the Wander Injected API
 ---
 
 # Intro
 
-<div data-full-width="false">
+<div data-full-width="false"><figure><img src="../.gitbook/assets/Wander Docs-API.png" alt=""><figcaption></figcaption></figure></div>
 
-<figure><img src="../.gitbook/assets/Docs-API.png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-The ArConnect API is a JavaScript object, injected into each browser tab. To interact with it, you simply need to call one of the functions in the `window.arweaveWallet` object.
+The Wander API is a JavaScript object, injected into each browser tab. To interact with it, you simply need to call one of the functions in the `window.arweaveWallet` object.
 
 ## Basic usage
 
-To use ArConnect in your application, you don't need to integrate or learn how the ArConnect Injected API works. Using [`arweave-js`](https://npmjs.com/arweave), you can easily sign a transaction through ArConnect in the background:
+To use Wander in your application, you don't need to integrate or learn how the Wander Injected API works. Using [`arweave-js`](https://npmjs.com/arweave), you can easily sign a transaction through Wander in the background:
 
 ```ts
 // create Arweave transaction
@@ -34,7 +30,7 @@ Once the transaction is signed, you can safely post it to the network.
 
 ## Advanced usage
 
-The ArConnect Injected API provides extra functionalities in case you wish to utilize the user's wallet to its full extent securely. These features are not integrated in the `arweave-js` package, but can be useful to further customize your app. The above mentioned `window.arweaveWallet` object holds the api functions necessary for this.
+The Wander Injected API provides extra functionalities in case you wish to utilize the user's wallet to its full extent securely. These features are not integrated in the `arweave-js` package, but can be useful to further customize your app. The above mentioned `window.arweaveWallet` object holds the api functions necessary for this.
 
 Each function is described in detail in the following pages.
 
@@ -44,7 +40,11 @@ Each function is described in detail in the following pages.
 
 ## TypeScript types
 
-To support ArConnect types for `window.arweaveWallet`, you can install the npm package `arconnect`, like this:
+To support Wander types for `window.arweaveWallet`, you can install the npm package `arconnect`, like this:
+
+{% hint style="info" %}
+_Wander was formerly know as ArConnect.  There are some API references that still use ArConnect_
+{% endhint %}
 
 ```sh
 npm i -D arconnect
@@ -64,7 +64,7 @@ To add the types to your project, you should either include the package in your 
 
 ## Additional Injected API fields
 
-The ArConnect Injected API provides some additional information about the extension. You can retrive the wallet version (`window.arweaveWallet.walletVersion`) and you can even verify that the currently used wallet API indeed belongs to ArConnect using the wallet name (`window.arweaveWallet.walletName`).
+The Wander Injected API provides some additional information about the extension. You can retrieve the wallet version (`window.arweaveWallet.walletVersion`) and you can even verify that the currently used wallet API indeed belongs to Wander using the wallet name (`window.arweaveWallet.walletName`).
 
 ```ts
 addEventListener("arweaveWalletLoaded", () => {

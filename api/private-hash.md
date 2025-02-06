@@ -1,5 +1,5 @@
 ---
-description: ArConnect Injected API privateHash() function
+description: Wander Injected API privateHash() function
 ---
 
 # Private hash

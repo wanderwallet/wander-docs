@@ -1,10 +1,10 @@
 ---
-description: ArConnect Injected API batchSignDataItem() function
+description: Wander Injected API batchSignDataItem() function
 ---
 
 # Batch Sign DataItem
 
-The batchSignDataItem() function allows you to create and sign an array of data item objects, compatible with [`arbundles`](https://npmjs.com/arbundles). These data items can then be submitted to an [ANS-104](https://github.com/ArweaveTeam/arweave-standards/blob/master/ans/ANS-104.md) compatible bundler.
+The batchSignDataItem() function allows you to create and sign an array of data item objects, compatible with [`arbundles`](https://www.npmjs.com/package/@dha-team/arbundles). These data items can then be submitted to an [ANS-104](https://github.com/ArweaveTeam/arweave-standards/blob/master/ans/ANS-104.md) compatible bundler.
 
 | Argument    | Type                                             | Description                    |
 | ----------- | ------------------------------------------------ | ------------------------------ |
@@ -19,7 +19,7 @@ The batchSignDataItem() function allows you to create and sign an array of data 
 {% endhint %}
 
 {% hint style="warning" %}
-**Warning:** The function returns an array of buffers of the signed data items. You'll need to manually load them into an [`arbundles`](https://npmjs.com/arbundles) `DataItem` instance as seen in the [example usage](batch-sign-dataitem.md#example-usage).
+**Warning:** The function returns an array of buffers of the signed data items. You'll need to manually load them into an [`arbundles`](https://www.npmjs.com/package/@dha-team/arbundles) `DataItem` instance as seen in the [example usage](batch-sign-dataitem.md#example-usage).
 {% endhint %}
 
 ## Data item
@@ -41,7 +41,7 @@ export interface DataItem[] {
 ## Example usage
 
 ```ts
-import { DataItem } from "arbundles";
+import { DataItem } from "@dha-team/arbundles";
 
 // connect to the extension
 await window.arweaveWallet.connect(["SIGN_TRANSACTION"]);

@@ -1,8 +1,8 @@
 ---
-description: ArConnect Injected API userTokens() function
+description: Wander Injected API userTokens() function
 ---
 
-# User tokens
+# User Tokens
 
 Some applications may request access to the tokens in your wallet and their associated balances. The `userTokens()` function returns the [result](user-tokens.md#result) from the API call.
 
@@ -20,7 +20,7 @@ Some applications may request access to the tokens in your wallet and their asso
 
 ## Options
 
-Currently ArConnect allows you to customize the balance fetching behavior (`false` by default):
+Currently Wander allows you to customize the balance fetching behavior (`false` by default):
 
 ```typescript
 export interface UserTokensOptions {

@@ -1,17 +1,19 @@
 ---
-description: ArConnect Injected API verifyMessage() function
+description: Wander Injected API verifyMessage() function
 ---
 
 # Verify message
 
-This function allows verifying a cryptographic signature [created by ArConnect](sign-message.md).
+This function allows verifying a cryptographic signature [created by ](sign-message.md)Wander.
 
-| Argument     | Type                                            | Description                                                                                                     |
-| ------------ | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `data`       | `ArrayBuffer`                                   | The data to verify the signature for                                                                            |
-| `signature`  | `ArrayBuffer \| string`                         | The signature to validate                                                                                       |
-| `publicKey?` | `string`                                        | Arweave wallet `JWK.n` field, transaction owner field or [public key from ArConnect](get-active-public-key.md). |
-| `options?`   | [`SignMessageOptions`](sign-message.md#options) | Configuration for the signature                                                                                 |
+| Argument     | Type                                            | Description                                                                                                  |
+| ------------ | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `data`       | `ArrayBuffer`                                   | The data to verify the signature for                                                                         |
+| `signature`  | `ArrayBuffer \| string`                         | The signature to validate                                                                                    |
+| `publicKey?` | `string`                                        | Arweave wallet `JWK.n` field, transaction owner field or [public key from Wander](get-active-public-key.md). |
+| `options?`   | [`SignMessageOptions`](sign-message.md#options) | Configuration for the signature                                                                              |
+
+
 
 {% hint style="info" %}
 **Note:** This function requires the [`SIGNATURE`](connect.md#permissions) permission.
