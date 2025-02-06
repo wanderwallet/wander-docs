@@ -4,7 +4,7 @@
 
 ## ⛏️ Developer tooling
 
-* [Wander Devtools](devtools/arconnect-devtools.md)
+* [Wander Devtools](devtools/wander-devtools.md)
 * [ArLocal Devtools](devtools/arlocal-devtools.md)
 
 ## 📚 External libraries
