@@ -6,12 +6,17 @@ description: Wander Injected API signDataItem() function
 
 The signDataItem() function allows you to create and sign a data item object, compatible with [`arbundles`](https://www.npmjs.com/package/@dha-team/arbundles). These data items can then be submitted to an [ANS-104](https://github.com/ArweaveTeam/arweave-standards/blob/master/ans/ANS-104.md) compatible bundler.
 
-| Argument   | Type                                     | Description                   |
-| ---------- | ---------------------------------------- | ----------------------------- |
-| `dataItem` | [`DataItem`](sign-dataitem.md#data-item) | The bundled data item to sign |
+| Argument   | Type                                                                                                                     | Description                           |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------- |
+| `dataItem` | [`DataItem`](sign-dataitem.md#data-item)                                                                                 | The bundled data item to sign         |
+| `options?` | [`SignatureOptions`](https://github.com/ArweaveTeam/arweave-js/blob/master/src/common/lib/crypto/crypto-interface.ts#L3) | Arweave transaction signature options |
 
 {% hint style="info" %}
 **Note:** This function requires the [`SIGN_TRANSACTION`](connect.md#permissions) permission.
+{% endhint %}
+
+{% hint style="info" %}
+**Note:** The `options` argument is optional, if it is not provided, the extension will use the default signature options (default salt length) to sign the transaction.
 {% endhint %}
 
 {% hint style="warning" %}

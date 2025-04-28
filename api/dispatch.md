@@ -6,12 +6,17 @@ description: Wander Injected API dispatch() function
 
 The `dispatch()` function allows you to quickly sign and send a transaction to the network in a bundled format. It is best for smaller datas and contract interactions. If the bundled transaction cannot be submitted, it will fall back to a base layer transaction. The function returns the [result](dispatch.md#dispatch-result) of the API call.
 
-| Argument      | Type                                                                    | Description                                                  |
-| ------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------ |
-| `transaction` | [`Transaction`](https://github.com/arweaveTeam/arweave-js#transactions) | A valid Arweave transaction instance (**without a keyfile**) |
+| Argument      | Type                                                                                                                     | Description                                                  |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
+| `transaction` | [`Transaction`](https://github.com/arweaveTeam/arweave-js#transactions)                                                  | A valid Arweave transaction instance (**without a keyfile**) |
+| `options?`    | [`SignatureOptions`](https://github.com/ArweaveTeam/arweave-js/blob/master/src/common/lib/crypto/crypto-interface.ts#L3) | Arweave transaction signature options                        |
 
 {% hint style="info" %}
 **Note:** This function requires the [`DISPATCH`](connect.md#permissions) permission.
+{% endhint %}
+
+{% hint style="info" %}
+**Note:** The `options` argument is optional, if it is not provided, the extension will use the default signature options (default salt length) to sign the transaction.
 {% endhint %}
 
 {% hint style="warning" %}
