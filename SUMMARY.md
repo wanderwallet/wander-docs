@@ -6,8 +6,9 @@
 
 * [Intro](connect/intro.md)
 * [Options](connect/options.md)
+* [Properties](connect/properties.md)
 * [Methods](connect/methods.md)
-* [Callbacks](connect/callbacks.md)
+* [Event Callbacks](connect/event-callbacks.md)
 * [Advanced Customization](connect/advanced-customization.md)
 * [Custom UI](connect/custom-ui.md)
 
@@ -28,7 +29,7 @@
 
 ## ❔ How To
 
-* [Subsiziding Payments](how-to/subsiziding-payments.md)
+* [Subsidizing Payments](how-to/subsidizing-payments.md)
 
 ## 🧪 API
 

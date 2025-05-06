@@ -10,4 +10,16 @@ enough for your, you can instead provide your own `iframe` element (reference) a
 
 ## Providing a custom `iframe`
 
+```javascript
+const wander = new WanderConnect({
+  iframe: document.getElementById("wander-iframe"),
+});
+```
+
 ## Disabling the default injected `button`
+
+```javascript
+const wander = new WanderConnect({
+  button: false,
+});
+```

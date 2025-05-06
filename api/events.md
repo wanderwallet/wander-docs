@@ -13,12 +13,13 @@ This event is dispatched once the Wander Injected API has been initialized in th
 ### Example
 
 ```ts
-addEventListener("arweaveWalletLoaded", () => {
-  // now we can interact with Wander
-  const permissions = await window.arweaveWallet.getPermissions();
+addEventListener("arweaveWalletLoaded", (e) => {
+  const { permissions } = e.detail;
 
-  if (permissions.length <= 0) {
+  if (permissions === 0) {
     await window.arweaveWallet.connect(["ACCESS_ADDRESS"]);
+  } else {
+    // We can already interact with the wallet...
   }
 });
 ```
@@ -31,9 +32,9 @@ This event is fired when the user manually switches their active wallet. The eve
 
 ```ts
 addEventListener("walletSwitch", (e) => {
-  const newAddress = e.detail.address;
+  const { address } = e.detail;
 
-  // handle wallet switch
+  // Handle wallet switch...
 });
 ```
 

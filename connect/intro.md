@@ -30,7 +30,7 @@ And offering a great developer experience too:
 
 Use the Wander Connect SDK to integrate the Wander Connect embedded wallet in your web applications and dApps.
 
-[![npm version](https://img.shields.io/npm/v/@wanderapp/embed-sdk.svg)](https://www.npmjs.com/package/@wanderapp/embed-sdk)
+[![npm version](https://img.shields.io/npm/v/@wanderapp/connect.svg)](https://www.npmjs.com/package/@wanderapp/connect)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -38,25 +38,25 @@ Use the Wander Connect SDK to integrate the Wander Connect embedded wallet in yo
 
 {% tab title="npm" %}
 ```bash
-npm install @wanderapp/embed-sdk
+npm install @wanderapp/connect
 ```
 {% endtab %}
 
 {% tab title="yarn" %}
 ```bash
-yarn add @wanderapp/embed-sdk
+yarn add @wanderapp/connect
 ```
 {% endtab %}
 
 {% tab title="pnpm" %}
 ```bash
-pnpm add @wanderapp/embed-sdk
+pnpm add @wanderapp/connect
 ```
 {% endtab %}
 
 {% tab title="bun" %}
 ```bash
-bun add @wanderapp/embed-sdk
+bun add @wanderapp/connect
 ```
 {% endtab %}
 
@@ -67,15 +67,16 @@ bun add @wanderapp/embed-sdk
 To use the Wander Connect embedded wallet, you first need to instante it:
 
 ```javascript
-import { WanderEmbedded } from "@wanderapp/embed-sdk";
+import { WanderConnect } from "@wanderapp/connect";
 
 // Initialize Wander Connect:
-const wander = new WanderConnect({ clientId: "ALPHA" });
+const wander = new WanderConnect({ clientId: "FREE_TRIAL" });
 ```
 
 {% hint style="warning" %}
-Using `clientId: "ALPHA"` will make Wander Connect work in `localhost`, but not in your real domain. In order to get a 
-valid `clientId`, please, [react out to us](<TODO: ADD CONTACT LINK>).
+Wander Connect will not require a developer account on launch. You can start using it with `clientId: "FREE_TRIAL"`.
+However, we'll soon require developers to sign up for a developer account, where you'll get your own `clientId` and get
+access new customization options.
 {% endhint %}
 
 After this, the default Wander Connect button will appear fixed in the bottom-right corner of the screen:
@@ -98,12 +99,14 @@ TODO: Add screenshot.
 You can use the `onAuth` option to listen for authentication changes, and request permissions to connect to the wallet
 just after the user authenticates. After they accept, your dApp can start interacting with the wallet:
 
+TODO: Update to use `arweaveWalletLoaded` event.
+
 ```typescript
-import { WanderEmbedded } from "@wanderapp/embed-sdk";
+import { WanderConnect } from "@wanderapp/connect";
 
 // Initialize Wander Connect:
 const wander = new WanderConnect({
-  clientId: "ALPHA",
+  clientId: "FREE_TRIAL",
   onAuth: (userDetails) => {
     if (!!userDetails) {
       try {
@@ -158,15 +161,15 @@ it, and, optionally, a [Ref](https://react.dev/learn/referencing-values-with-ref
 
 ```typescript
 import { useRef, useState } from "react";
-import { WanderEmbedded } from "@wanderapp/embed-sdk";
+import { WanderConnect } from "@wanderapp/connect";
 
-function App() {
+export function MyApp() {
   const wanderRef = useRef(null);
 
   useEffect(() => {
     // Initialize Wander Connect:
     const wander = new WanderConnect({
-      clientId: "ALPHA",
+      clientId: "FREE_TRIAL",
       onAuth: (userDetails) => {
         if (!!userDetails) {
           try {
@@ -202,6 +205,11 @@ function App() {
 }
 ```
 
+### Next.js
+
+To use Wander Connect on a Next.js site, you would follow the same steps describe above in the React section. However,
+if you are using the App Router, you need to make sure you load Wander Connect in a client component.
+
 ## Customization
 
 Wander Connect supports 4 types of layout plus light and dark themes, which should be enough for most projects. If you
@@ -218,4 +226,17 @@ options, but if that's still not enough, you can always opt-out of the default U
 
 ## Architecture & Security
 
-TODO: Add a brief summary about architecture & security until the whitepaper is ready
+Wander Connect uses [Shamir Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing) to split users'
+private keys in 2 shares, one stored in the users' device and one stored in our servers.
+
+In order for users to use one of their private keys, they need to authenticate and prove they have the corresponding
+(device) share, without actually transferring it to our servers (so that users' private keys never reach our servers).
+Once they do that, the server will send back its share, and the Wander Connect app running in the user's device will
+reconstruct the private key.
+
+We use [Privy's `shamir-secret-sharing`](https://www.npmjs.com/package/shamir-secret-sharing) package, which has been
+audited and is actively maintained.
+
+## Browser Support
+
+The SDK supports all modern browsers (Chrome, Firefox, Safari, Edge).
