@@ -75,8 +75,8 @@ const wander = new WanderConnect({ clientId: "FREE_TRIAL" });
 
 {% hint style="warning" %}
 Wander Connect will not require a developer account on launch. You can start using it with `clientId: "FREE_TRIAL"`.
-However, we'll soon require developers to sign up for a developer account, where you'll get your own `clientId` and get
-access new customization options.
+
+However, we'll soon require developers to sign up for a developer account, where you'll get your own `clientId` and get access new customization options.
 {% endhint %}
 
 After this, the default Wander Connect button will appear fixed in the bottom-right corner of the screen:
@@ -135,12 +135,9 @@ Depending on what type of access the user granted, they'll be prompted again to 
 TODO: Add screenshot.
 
 {% hint style="info" %}
-As you can see in the example above, to use Wander Connect in your application, you don't need to integrate or learn how
-most of the [Wander Injected API](api/intro) works. Using [`arweave-js`](https://npmjs.com/arweave), you can easily sign
-a transaction through Wander Connect.
+As you can see in the example above, to use Wander Connect in your application, you don't need to integrate or learn how most of the [Wander Injected API](api/intro) works. Using [`arweave-js`](https://npmjs.com/arweave), you can easily sign a transaction through Wander Connect.
 
-However, note that the [Wander Injected API](api/intro) is exactly the same for both Wander Connect and the Wander
-Browser Extension, and can be accessed at `window.arweaveWallet` after instantiating Wander Connect.
+However, note that the [Wander Injected API](api/intro) is exactly the same for both Wander Connect and the Wander Browser Extension, and can be accessed at `window.arweaveWallet` after instantiating Wander Connect.
 {% endhint %}
 
 Additional features and options, only available for Wander Connect (not available for the Wander Browser Extension), are available through the SDK options, methods and callbacks:
