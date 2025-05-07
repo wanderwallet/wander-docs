@@ -12,20 +12,10 @@
 * [Custom UI](connect/custom-ui.md)
 * [Advanced Customization](connect/advanced-customization.md)
 
-## ⛏️ Developer tooling
-
-* [Wander Devtools](devtools/wander-devtools.md)
-* [ArLocal Devtools](devtools/arlocal-devtools.md)
-
-## 📚 External libraries
-
-* [Arweave Wallet Kit](https://docs.arweavekit.com/arweave-wallet-kit/introduction)
-* [arweave-js](https://npmjs.com/arweave)
-
 ## 🔭 Examples
 
 * [Playground](https://playground.othent.io/)
-* [Applications](https://arconnect.io/apps)
+* [Applications](https://www.wander.app/apps)
 
 ## ❔ How To
 
@@ -56,6 +46,16 @@
 * [Subscriptions](api/subscriptions.md)
 * [Retrive permissions](api/get-permissions.md)
 * [Retrive Gateway Config](api/get-arweave-config.md)
+
+## ⛏️ Developer tooling
+
+* [Wander Devtools](devtools/wander-devtools.md)
+* [ArLocal Devtools](devtools/arlocal-devtools.md)
+
+## 📚 External libraries
+
+* [Arweave Wallet Kit](https://docs.arweavekit.com/arweave-wallet-kit/introduction)
+* [arweave-js](https://npmjs.com/arweave)
 
 ***
 
