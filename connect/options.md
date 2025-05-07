@@ -2,14 +2,14 @@
 description: Options for the Wander Connect SDK
 ---
 
-# Wander Connect Options
+# Options
 
 The Wander Connect SDK options include:
 
-- SDK setup options.
-- Basic customization options.
-- Specific customization options for the 2 different UI components it renders on the screen: the iframe and the button.
-- Event callbacks.
+* SDK setup options.
+* Basic customization options.
+* Specific customization options for the 2 different UI components it renders on the screen: the iframe and the button.
+* Event callbacks.
 
 A more complete example will look something like this:
 
@@ -34,7 +34,7 @@ const wander = new WanderConnect({
 });
 ```
 
-###### API 
+**API**
 
 ```typescript
 interface IframeOptions {
@@ -86,7 +86,7 @@ const wander = new WanderConnect({
 });
 ```
 
-###### API 
+**API**
 
 ```typescript
 interface IframeOptions {
@@ -102,16 +102,13 @@ interface IframeOptions {
 }
 ```
 
-TODO: Add link to GitHub.
-
+[Github: wander-connect.types.ts](https://github.com/wanderwallet/Wander/blob/production/wander-connect-sdk/src/wander-connect.types.ts)
 
 ## Button Customization Options
-
 
 ### Button Positioning
 
 You have three methods for custom positioning:
-
 
 #### Using Predefined Positions
 
@@ -191,7 +188,7 @@ Then style it with external CSS:
 }
 ```
 
-###### API 
+**API**
 
 ```typescript
 interface ButtonOptions {
@@ -210,4 +207,4 @@ interface ButtonOptions {
 }
 ```
 
-TODO: Add link to GitHub.
+[Github: wander-connect.types.ts](https://github.com/wanderwallet/Wander/blob/production/wander-connect-sdk/src/wander-connect.types.ts)

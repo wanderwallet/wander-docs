@@ -12,7 +12,7 @@
 * [Advanced Customization](connect/advanced-customization.md)
 * [Custom UI](connect/custom-ui.md)
 
-## 🛠️ Developer tooling
+## ⛏️ Developer tooling
 
 * [Wander Devtools](devtools/wander-devtools.md)
 * [ArLocal Devtools](devtools/arlocal-devtools.md)
