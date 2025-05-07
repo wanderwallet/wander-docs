@@ -198,17 +198,11 @@ To use Wander Connect on a Next.js site, you would follow the same steps describ
 
 Wander Connect supports 4 types of layout plus light and dark themes, which should be enough for most projects. If you need to better match your brand and app look and feel, Wander Connect also includes various advanced customization options, but if that's still not enough, you can always opt-out of the default UI and provide a custom one:
 
-{% embed url="https://github.com/wanderwallet/wander-docs/blob/main/connect/options.md" %}
-Wander Connect Options
-{% endembed %}
+{% embed url="https://docs.wander.app/wander-connect/advanced-customization" %}
 
-{% embed url="https://github.com/wanderwallet/wander-docs/blob/main/connect/advanced-customization.md" %}
-Wander Connect Advanced Customizations
-{% endembed %}
+{% embed url="https://docs.wander.app/wander-connect/custom-ui" %}
 
-{% embed url="https://github.com/wanderwallet/wander-docs/blob/main/connect/custom-ui.md" %}
-Wander Connect Custom UI
-{% endembed %}
+{% embed url="https://docs.wander.app/wander-connect/options" %}
 
 ## Architecture & Security
 
