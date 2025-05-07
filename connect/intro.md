@@ -82,7 +82,7 @@ And, once authenticated, the default wallet UI will appear, again, fixed in the 
 
 TODO: Add screenshot.
 
-Once the user authenticates, you should request permissions using [`connect()`](api/connect.md). This will prompt your\
+Once the user authenticates, you should request permissions using [`connect()`](https://github.com/wanderwallet/wander-docs/blob/main/api/connect.md). This will prompt your\
 users to connect their wallet to your dApp:
 
 TODO: Add screenshot.
@@ -204,8 +204,6 @@ To use Wander Connect on a Next.js site, you would follow the same steps describ
 ## Customization
 
 Wander Connect supports 4 types of layout plus light and dark themes, which should be enough for most projects. If you need to better match your brand and app look and feel, Wander Connect also includes various advanced customization options, but if that's still not enough, you can always opt-out of the default UI and provide a custom one:
-
-// TODO: Replace with Cards: https://docs.gitbook.com/creating-content/blocks/cards
 
 {% embed url="https://github.com/wanderwallet/wander-docs/blob/main/connect/options.md" %}
 Wander Connect Options
