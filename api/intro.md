@@ -13,15 +13,16 @@ The Wander API is a JavaScript object, injected into each browser tab. To intera
 To use Wander in your application, you don't need to integrate or learn how the Wander Injected API works. Using [`arweave-js`](https://npmjs.com/arweave), you can easily sign a transaction through Wander in the background:
 
 ```ts
-// create Arweave transaction
-const tx = await arweave.createTransaction({
-  /* tx options */
-});
+// 1. Connect your app to the wallet:
+await arweaveWallet.connect([...]);
 
-// sign transaction
+// 2. Create Arweave transaction:
+const tx = await arweave.createTransaction({ ... });
+
+// 3. Sign transaction:
 await arweave.transactions.sign(tx);
 
-// TODO: handle signed transaction
+// 4. TODO: Handle (e.g. post) signed transaction...
 ```
 
 When signing a transaction through [`arweave-js`](https://npmjs.com/arweave), you'll need to omit the second argument of the `sign()` function, or set it to `"use_wallet"`. This will let the package know to use the extension in the background to sign the transaction.

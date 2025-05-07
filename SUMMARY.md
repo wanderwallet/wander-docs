@@ -2,7 +2,17 @@
 
 * [👋 Welcome to Wander](README.md)
 
-## ⛏️ Developer tooling
+## ⚡ Wander Connect
+
+* [Intro](connect/intro.md)
+* [Options](connect/options.md)
+* [Properties](connect/properties.md)
+* [Methods](connect/methods.md)
+* [Event Callbacks](connect/event-callbacks.md)
+* [Advanced Customization](connect/advanced-customization.md)
+* [Custom UI](connect/custom-ui.md)
+
+## 🛠️ Developer tooling
 
 * [Wander Devtools](devtools/wander-devtools.md)
 * [ArLocal Devtools](devtools/arlocal-devtools.md)
@@ -12,9 +22,14 @@
 * [Arweave Wallet Kit](https://docs.arweavekit.com/arweave-wallet-kit/introduction)
 * [arweave-js](https://npmjs.com/arweave)
 
-## 🔭 Demos
+## 🔭 Examples
 
+* [Playground](https://playground.othent.io/)
 * [Applications](https://arconnect.io/apps)
+
+## ❔ How To
+
+* [Subsidizing Payments](how-to/subsidizing-payments.md)
 
 ## 🧪 API
 
