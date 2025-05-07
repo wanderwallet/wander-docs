@@ -4,7 +4,7 @@
 
 ## ⚡ Wander Connect
 
-* [Intro](connect/intro.md)
+* [Intro - Wander Connect](connect/intro.md)
 * [Options](connect/options.md)
 * [Properties](connect/properties.md)
 * [Methods](connect/methods.md)
@@ -23,7 +23,7 @@
 
 ## 🧪 API
 
-* [Intro](api/intro.md)
+* [Intro - Wander Injected API](api/intro.md)
 * [Events](api/events.md)
 * [Connect](api/connect.md)
 * [Disconnect](api/disconnect.md)
