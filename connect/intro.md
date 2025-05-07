@@ -133,12 +133,6 @@ Additional features and options, only available for Wander Connect (not availabl
 
 <table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Options</td><td><a href="options.md">options.md</a></td><td><a href="../.gitbook/assets/Docs Card - Options.png">Docs Card - Options.png</a></td></tr><tr><td>Event Callbacks</td><td><a href="event-callbacks.md">event-callbacks.md</a></td><td><a href="../.gitbook/assets/Docs Card - Callbacks.png">Docs Card - Callbacks.png</a></td></tr><tr><td>Methods</td><td><a href="methods.md">methods.md</a></td><td><a href="../.gitbook/assets/Docs Card - Methods.png">Docs Card - Methods.png</a></td></tr></tbody></table>
 
-{% embed url="https://docs.wander.app/wander-connect/options" %}
-
-{% embed url="https://docs.wander.app/wander-connect/methods" %}
-
-{% embed url="https://docs.wander.app/wander-connect/event-callbacks" %}
-
 ### React
 
 When using React, the example above stays mostly the same. The main change needed is to add a `useEffect` block to run it, and, optionally, a [Ref](https://react.dev/learn/referencing-values-with-refs) to keep a reference to the`WanderConnect` instance you've just created:;
@@ -196,12 +190,6 @@ To use Wander Connect on a Next.js site, you would follow the same steps describ
 ## Customization
 
 Wander Connect supports 4 types of layout plus light and dark themes, which should be enough for most projects. If you need to better match your brand and app look and feel, Wander Connect also includes various advanced customization options, but if that's still not enough, you can always opt-out of the default UI and provide a custom one:
-
-{% embed url="https://docs.wander.app/wander-connect/advanced-customization" %}
-
-{% embed url="https://docs.wander.app/wander-connect/custom-ui" %}
-
-{% embed url="https://docs.wander.app/wander-connect/options" %}
 
 <table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th></tr></thead><tbody><tr><td>Options</td><td><a href="options.md">options.md</a></td></tr><tr><td>Advanced Customization</td><td><a href="advanced-customization.md">advanced-customization.md</a></td></tr><tr><td>Custom UI</td><td><a href="custom-ui.md">custom-ui.md</a></td></tr></tbody></table>
 
