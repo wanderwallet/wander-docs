@@ -2,10 +2,9 @@
 description: Advanced customization options for the Wander Connect Embedded Wallet
 ---
 
-# Wander Connect Advanced Customization
+# Advanced Customization
 
-The Wander Connect SDK allows you customize different CSS variables for the 2 different UI components it renders on the
-screen: the wallet and the button. Additionally, you can also inject your own custom CSS.
+The Wander Connect SDK allows you customize different CSS variables for the 2 different UI components it renders on the screen: the wallet and the button. Additionally, you can also inject your own custom CSS.
 
 ## Customize CSS Variables
 
@@ -53,18 +52,17 @@ const wander = new WanderConnect({
 
 ### Iframe
 
-You can add custom CSS styles to the iframe using `customStyles` option. When using this option, you must use CSS
-selectors to target specific elements.
+You can add custom CSS styles to the iframe using `customStyles` option. When using this option, you must use CSS selectors to target specific elements.
 
 Available selectors:
 
-- `.backdrop` - Targets the backdrop overlay behind the iframe
-  - `.backdrop.show` - Applied when the backdrop is visible
-- `.iframe-wrapper` - Targets the container that wraps the iframe
-  - `.iframe-wrapper.show` - Applied when the iframe is visible
-- `.iframe` - Targets the actual iframe element
-- `.half-image` - Targets the image element used in half layout mode
-  - `.half-image.show` - Applied when the half-image is visible
+* `.backdrop` - Targets the backdrop overlay behind the iframe
+  * `.backdrop.show` - Applied when the backdrop is visible
+* `.iframe-wrapper` - Targets the container that wraps the iframe
+  * `.iframe-wrapper.show` - Applied when the iframe is visible
+* `.iframe` - Targets the actual iframe element
+* `.half-image` - Targets the image element used in half layout mode
+  * `.half-image.show` - Applied when the half-image is visible
 
 The HTML structure is follows:
 
@@ -139,10 +137,10 @@ const wander = new WanderConnect({
 
 The iframe wrapper element (`.iframe-wrapper`) has several data attributes that you can use for conditional styling:
 
-- `[data-layout="popup|modal|sidebar|half"]` - Current layout type
-- `[data-position="left|right|top-left|top-right|bottom-left|bottom-right"]` - Position of the iframe
-- `[data-expanded="true|false"]` - Whether the iframe is in expanded mode
-- `[data-expand-on-mobile="true|false"]` - Whether the iframe expands on mobile devices
+* `[data-layout="popup|modal|sidebar|half"]` - Current layout type
+* `[data-position="left|right|top-left|top-right|bottom-left|bottom-right"]` - Position of the iframe
+* `[data-expanded="true|false"]` - Whether the iframe is in expanded mode
+* `[data-expand-on-mobile="true|false"]` - Whether the iframe expands on mobile devices
 
 You can also use these when targeting the iframe element (`.iframe`):
 
@@ -201,18 +199,17 @@ customStyles: `
 
 ### Button
 
-You can add custom CSS styles to the button using `customStyles` option. When using this option, you must use CSS
-selectors to target specific elements.
+You can add custom CSS styles to the button using `customStyles` option. When using this option, you must use CSS selectors to target specific elements.
 
 Available selectors:
 
-- `:host` - Targets the button container
-- `.button` - Targets the button element
-- `.wanderLogo` - Targets the Wander logo SVG
-- `.label` - Targets the button text label
-- `.balance` - Targets the balance display
-- `.indicator` - Targets the connection status indicator
-- `.notifications` - Targets the notifications badge
+* `:host` - Targets the button container
+* `.button` - Targets the button element
+* `.wanderLogo` - Targets the Wander logo SVG
+* `.label` - Targets the button text label
+* `.balance` - Targets the balance display
+* `.indicator` - Targets the connection status indicator
+* `.notifications` - Targets the notifications badge
 
 Example usage:
 
@@ -271,18 +268,18 @@ const wander = new WanderConnect({
 
 The button element has a `data-variant` HTML attribute you can use for styling:
 
-- `[data-variant="loading|onboarding|authenticated|not-authenticated"]`
+* `[data-variant="loading|onboarding|authenticated|not-authenticated"]`
 
 As well as some CSS classes that are added based on its state:
 
-- `.isConnected` - Added when the wallet is connected
-- `.isOpen` - Added when the wallet interface is open
+* `.isConnected` - Added when the wallet is connected
+* `.isOpen` - Added when the wallet interface is open
 
 Additionally, the button's `.label` and `.balance` elements also have some modifiers:
 
-- `.label.isLoading`
-- `.balance.isLoading`
-- `.balance.isHidden`
+* `.label.isLoading`
+* `.balance.isLoading`
+* `.balance.isHidden`
 
 You can use these classes in your `customStyles` to style different states:
 
