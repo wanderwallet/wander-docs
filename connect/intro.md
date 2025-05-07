@@ -76,16 +76,16 @@ After this, the default Wander Connect button will appear fixed in the bottom-ri
 
 Clicking it will open a popup where your users can authenticate:
 
-TODO: Add screenshot.
+![](<../.gitbook/assets/Screenshot 2025-05-07 at 5.45.14 PM (1).png>)
 
 And, once authenticated, the default wallet UI will appear, again, fixed in the bottom-right corner of the screen:
 
-TODO: Add screenshot.
+![](<../.gitbook/assets/Screenshot 2025-05-07 at 5.48.26 PM.png>)
 
 Once the user authenticates, you should request permissions using [`connect()`](https://github.com/wanderwallet/wander-docs/blob/main/api/connect.md). This will prompt your\
 users to connect their wallet to your dApp:
 
-TODO: Add screenshot.
+![](<../.gitbook/assets/Screenshot 2025-05-07 at 5.49.14 PM (1).png>)
 
 You can use the `onAuth` option to listen for authentication changes, and request permissions to connect to the wallet just after the user authenticates. After they accept, your dApp can start interacting with the wallet:
 
@@ -122,7 +122,7 @@ const wander = new WanderConnect({
 
 Depending on what type of access the user granted, they'll be prompted again to sign the transaction:
 
-TODO: Add screenshot.
+![](<../.gitbook/assets/Screenshot 2025-05-07 at 5.52.25 PM (1).png>)
 
 {% hint style="info" %}
 As you can see in the example above, to use Wander Connect in your application, you don't need to integrate or learn how\
