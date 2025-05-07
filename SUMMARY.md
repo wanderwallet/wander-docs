@@ -9,8 +9,8 @@
 * [Properties](connect/properties.md)
 * [Methods](connect/methods.md)
 * [Event Callbacks](connect/event-callbacks.md)
-* [Advanced Customization](connect/advanced-customization.md)
 * [Custom UI](connect/custom-ui.md)
+* [Advanced Customization](connect/advanced-customization.md)
 
 ## ⛏️ Developer tooling
 
