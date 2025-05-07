@@ -4,7 +4,7 @@ description: Introducing the Wander Connect Embedded Wallet for Arweave and AO
 
 # Intro
 
-<div data-full-width="false"><figure><img src="../.gitbook/assets/Wander Docs-API.png" alt=""><figcaption></figcaption></figure></div>
+<div data-full-width="false"><figure><img src="../.gitbook/assets/Docs Banner.png" alt=""><figcaption></figcaption></figure></div>
 
 A simplified, lightweight, customizable embedded wallet for Arweave and AO that bridges the gap between web2 and web3, helping non-crypto native users onboard into web3 easily!
 
@@ -65,9 +65,9 @@ const wander = new WanderConnect({ clientId: "FREE_TRIAL" });
 ```
 
 {% hint style="warning" %}
-Wander Connect will not require a developer account on launch. You can start using it with `clientId: "FREE_TRIAL"`.\
-However, we'll soon require developers to sign up for a developer account, where you'll get your own `clientId` and get\
-access new customization options.
+Wander Connect will not require a developer account on launch. You can start using it with `clientId: "FREE_TRIAL"`.
+
+However, we'll soon require developers to sign up for a developer account, where you'll get your own `clientId` and get access new customization options.
 {% endhint %}
 
 After this, the default Wander Connect button will appear fixed in the bottom-right corner of the screen:
@@ -124,15 +124,14 @@ Depending on what type of access the user granted, they'll be prompted again to 
 ![](<../.gitbook/assets/Screenshot 2025-05-07 at 5.52.25 PM (1).png>)
 
 {% hint style="info" %}
-As you can see in the example above, to use Wander Connect in your application, you don't need to integrate or learn how\
-most of the [Wander Injected API](https://github.com/wanderwallet/wander-docs/blob/main/connect/intro.md) works. Using [`arweave-js`](https://npmjs.com/arweave), you can easily sign\
-a transaction through Wander Connect.
+As you can see in the example above, to use Wander Connect in your application, you don't need to integrate or learn how most of the [Wander Injected API](https://github.com/wanderwallet/wander-docs/blob/main/connect/intro.md) works. Using [`arweave-js`](https://npmjs.com/arweave), you can easily sign a transaction through Wander Connect.
 
-However, note that the [Wander Injected API](https://github.com/wanderwallet/wander-docs/blob/main/connect/intro.md) is exactly the same for both Wander Connect and the Wander\
-Browser Extension, and can be accessed at `window.arweaveWallet` after instantiating Wander Connect.
+However, note that the [Wander Injected API](https://github.com/wanderwallet/wander-docs/blob/main/connect/intro.md) is exactly the same for both Wander Connect and the Wander Browser Extension, and can be accessed at `window.arweaveWallet` after instantiating Wander Connect.
 {% endhint %}
 
 Additional features and options, only available for Wander Connect (not available for the Wander Browser Extension), are available through the SDK options, methods and callbacks:
+
+<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Options</td><td><a href="options.md">options.md</a></td><td><a href="../.gitbook/assets/Docs Card - Options.png">Docs Card - Options.png</a></td></tr><tr><td>Event Callbacks</td><td><a href="event-callbacks.md">event-callbacks.md</a></td><td><a href="../.gitbook/assets/Docs Card - Callbacks.png">Docs Card - Callbacks.png</a></td></tr><tr><td>Methods</td><td><a href="methods.md">methods.md</a></td><td><a href="../.gitbook/assets/Docs Card - Methods.png">Docs Card - Methods.png</a></td></tr></tbody></table>
 
 {% embed url="https://docs.wander.app/wander-connect/options" %}
 
@@ -203,6 +202,8 @@ Wander Connect supports 4 types of layout plus light and dark themes, which shou
 {% embed url="https://docs.wander.app/wander-connect/custom-ui" %}
 
 {% embed url="https://docs.wander.app/wander-connect/options" %}
+
+<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th></tr></thead><tbody><tr><td>Options</td><td><a href="options.md">options.md</a></td></tr><tr><td>Advanced Customization</td><td><a href="advanced-customization.md">advanced-customization.md</a></td></tr><tr><td>Custom UI</td><td><a href="custom-ui.md">custom-ui.md</a></td></tr></tbody></table>
 
 ## Architecture & Security
 
