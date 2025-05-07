@@ -124,9 +124,9 @@ Depending on what type of access the user granted, they'll be prompted again to 
 ![](<../.gitbook/assets/Screenshot 2025-05-07 at 5.52.25 PM (1).png>)
 
 {% hint style="info" %}
-As you can see in the example above, to use Wander Connect in your application, you don't need to integrate or learn how most of the [Wander Injected API](https://github.com/wanderwallet/wander-docs/blob/main/connect/intro.md) works. Using [`arweave-js`](https://npmjs.com/arweave), you can easily sign a transaction through Wander Connect.
+As you can see in the example above, to use Wander Connect in your application, you don't need to integrate or learn how most of the [Wander Injected API](https://docs.wander.app/api/intro) works. Using [`arweave-js`](https://npmjs.com/arweave), you can easily sign a transaction through Wander Connect.
 
-However, note that the [Wander Injected API](https://github.com/wanderwallet/wander-docs/blob/main/connect/intro.md) is exactly the same for both Wander Connect and the Wander Browser Extension, and can be accessed at `window.arweaveWallet` after instantiating Wander Connect.
+However, note that the [Wander Injected API](https://docs.wander.app/api/intro) is exactly the same for both Wander Connect and the Wander Browser Extension, and can be accessed at `window.arweaveWallet` after instantiating Wander Connect.
 {% endhint %}
 
 Additional features and options, only available for Wander Connect (not available for the Wander Browser Extension), are available through the SDK options, methods and callbacks:
