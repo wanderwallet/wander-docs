@@ -82,8 +82,7 @@ And, once authenticated, the default wallet UI will appear, again, fixed in the 
 
 ![](<../.gitbook/assets/Screenshot 2025-05-07 at 5.48.26 PM.png>)
 
-Once the user authenticates, you should request permissions using [`connect()`](https://github.com/wanderwallet/wander-docs/blob/main/api/connect.md). This will prompt your\
-users to connect their wallet to your dApp:
+Once the user authenticates, you should request permissions using [`connect()`](https://github.com/wanderwallet/wander-docs/blob/main/api/connect.md). This will prompt your users to connect their wallet to your dApp:
 
 ![](<../.gitbook/assets/Screenshot 2025-05-07 at 5.49.14 PM (1).png>)
 
@@ -135,17 +134,11 @@ Browser Extension, and can be accessed at `window.arweaveWallet` after instantia
 
 Additional features and options, only available for Wander Connect (not available for the Wander Browser Extension), are available through the SDK options, methods and callbacks:
 
-{% embed url="https://github.com/wanderwallet/wander-docs/blob/main/connect/options.md" %}
-Wander Connect Options
-{% endembed %}
+{% embed url="https://docs.wander.app/wander-connect/options" %}
 
-{% embed url="https://github.com/wanderwallet/wander-docs/blob/main/connect/event-callbacks.md" %}
-Wander Connect Callbacks
-{% endembed %}
+{% embed url="https://docs.wander.app/wander-connect/methods" %}
 
-{% embed url="https://github.com/wanderwallet/wander-docs/blob/main/connect/methods.md" %}
-Wander Connect Methods
-{% endembed %}
+{% embed url="https://docs.wander.app/wander-connect/event-callbacks" %}
 
 ### React
 
