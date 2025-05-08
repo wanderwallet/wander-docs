@@ -2,9 +2,11 @@
 description: Introducing the Wander Connect Embedded Wallet for Arweave and AO
 ---
 
-# Intro
+# Intro - Wander Connect
 
 <div data-full-width="false"><figure><img src="../.gitbook/assets/Docs Banner.png" alt=""><figcaption></figcaption></figure></div>
+
+[![Wander Connect SDK NPM package](https://img.shields.io/npm/v/@wanderapp/connect.svg?style=for-the-badge\&color=%23CC3534)](https://www.npmjs.com/package/@wanderapp/connect) [![Wander Connect SDK NPM package license: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge\&color=%230077FF)](https://opensource.org/licenses/MIT)
 
 A simplified, lightweight, customizable embedded wallet for Arweave and AO that bridges the gap between web2 and web3, helping non-crypto native users onboard into web3 easily!
 
@@ -20,12 +22,6 @@ And offering a great developer experience too:
 * 🔒 **Secure**: User keys are secured using advanced cryptography, such as AES and Shamir Secret Sharing. Neither we nor your app will ever get access to users' private keys.
 
 ## Installation
-
-Use the Wander Connect SDK to integrate the Wander Connect embedded wallet in your web applications and dApps.
-
-[![npm version](https://img.shields.io/npm/v/@wanderapp/connect.svg)](https://www.npmjs.com/package/@wanderapp/connect)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 {% tabs %}
 {% tab title="npm" %}
