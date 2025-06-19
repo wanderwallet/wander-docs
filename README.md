@@ -1,15 +1,15 @@
 ---
 description: >-
   A non-custodial Arweave and AO native wallet with extensive features.  Wander
-  is available as a browser extension, mobile application, and embedded smart
-  account.
+  is available as a browser extension, mobile application, and embedded wallet
+  SDK.
 ---
 
 # 👋 Welcome to Wander
 
 <figure><img src=".gitbook/assets/Docs-Home.png" alt="Wander cover image"><figcaption></figcaption></figure>
 
-Wander is an Arweave and AO native wallet that provides non-custodial wallet and asset management. Wander allows wallet holders to interact with any Arweave or AO dApps without sharing the user needing to share private keys with the dApp.&#x20;
+Wander is an Arweave and AO native wallet that provides non-custodial wallet and asset management. Wander allows wallet holders to interact with any Arweave or AO dApps securely, without sharing their private keys with the dApp.&#x20;
 
 {% hint style="info" %}
 _Wander was formerly known as ArConnect_
