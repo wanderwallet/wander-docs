@@ -51,13 +51,39 @@ bun add @wanderapp/connect
 
 ## Basic Usage
 
-To use the Wander Connect embedded wallet, you first need to instante it:
+To use the Wander Connect embedded wallet, you first need to instante it and listen for the `arweaveWalletLoaded`  event, which signals that the wallet API is ready:
 
 ```javascript
 import { WanderConnect } from "@wanderapp/connect";
 
 // Initialize Wander Connect:
-const wander = new WanderConnect({ clientId: "FREE_TRIAL" });
+const wander = new WanderConnect({
+  clientId: "FREE_TRIAL",
+});
+
+// Wait for the wallet API to be injected and for
+// the user to authenticate:
+window.addEventListener("arweaveWalletLoaded", async (e) => {
+  try {  
+    const { permissions = [] } = e.detail || {};
+    
+    if (permissions.length === 0) {
+      // Your app is not connected to the wallet yet, so
+      // you first need to call `connect()`:
+      await window.arweaveWallet.connect([...]);
+    }
+    
+    // Create Arweave transaction:
+    const tx = await arweave.createTransaction({ ... });
+  
+    // Sign transaction:
+    await arweave.transactions.sign(tx);
+  
+    // TODO: Handle (e.g. post) signed transaction.
+  } catch (err) {
+    alert(`Error: ${ err.message }`);
+  }
+});
 ```
 
 {% hint style="warning" %}
@@ -78,42 +104,9 @@ And, once authenticated, the default wallet UI will appear, again, fixed in the 
 
 ![](<../.gitbook/assets/Screenshot 2025-05-07 at 5.48.26 PM.png>)
 
-Once the user authenticates, you should request permissions using [`connect()`](https://github.com/wanderwallet/wander-docs/blob/main/api/connect.md). This will prompt your users to connect their wallet to your dApp:
+Once the user authenticates, an `arweaveWalletLoaded` event will be dispatched. You can then request permissions using [`connect()`](https://github.com/wanderwallet/wander-docs/blob/main/api/connect.md). This will prompt your users to connect their wallet to your dApp:
 
 ![](<../.gitbook/assets/Screenshot 2025-05-07 at 5.49.14 PM (1).png>)
-
-You can use the `onAuth` option to listen for authentication changes, and request permissions to connect to the wallet just after the user authenticates. After they accept, your dApp can start interacting with the wallet:
-
-TODO: Update to use `arweaveWalletLoaded` event.
-
-```typescript
-import { WanderConnect } from "@wanderapp/connect";
-
-// Initialize Wander Connect:
-const wander = new WanderConnect({
-  clientId: "FREE_TRIAL",
-  onAuth: (userDetails) => {
-    if (!!userDetails) {
-      try {
-        // 1. Connect your app to the wallet:
-        await arweaveWallet.connect([...]);
-
-        // 2. Create Arweave transaction:
-        const tx = await arweave.createTransaction({ ... });
-
-        // 3. Sign transaction:
-        await arweave.transactions.sign(tx);
-
-        // 4. TODO: Handle (e.g. post) signed transaction...
-
-      } catch () {
-        alert("The wallet wasn't connected.")
-      }
-    }
-  }
-});
-
-```
 
 Depending on what type of access the user granted, they'll be prompted again to sign the transaction:
 
@@ -144,34 +137,42 @@ export function MyApp() {
     // Initialize Wander Connect:
     const wander = new WanderConnect({
       clientId: "FREE_TRIAL",
-      onAuth: (userDetails) => {
-        if (!!userDetails) {
-          try {
-            // 1. Connect your app to the wallet:
-            await arweaveWallet.connect([...]);
-
-            // 2. Create Arweave transaction:
-            const tx = await arweave.createTransaction({ ... });
-
-            // 3. Sign transaction:
-            await arweave.transactions.sign(tx);
-
-            // 4. TODO: Handle (e.g. post) signed transaction...
-
-          } catch () {
-            alert("The wallet wasn't connected.")
-          }
-        }
-      }
     });
-
+    
     // Keep a reference to the instance:
     wanderRef.current = wander;
+    
+    const handleWalletLoaded = async (e) => {
+      try {  
+        const { permissions = [] } = e.detail || {};
+        
+        if (permissions.length === 0) {
+          // Your app is not connected to the wallet yet, so
+          // you first need to call `connect()`:
+          await window.arweaveWallet.connect([...]);
+        }
+        
+        // Create Arweave transaction:
+        const tx = await arweave.createTransaction({ ... });
+      
+        // Sign transaction:
+        await arweave.transactions.sign(tx);
+      
+        // TODO: Handle (e.g. post) signed transaction.
+      } catch (err) {
+        alert(`Error: ${ err.message }`);
+      }
+    }
+    
+    // Wait for the wallet API to be injected and for
+    // the user to authenticate:
+    window.addEventListener("arweaveWalletLoaded", handleWalletLoaded);
 
     // Clean up on unmount:
     return () => {
-      wanderRef.current = null;
       wander?.destroy();
+      wanderRef.current = null;
+      window.removeEventListener("arweaveWalletLoaded", handleWalletLoaded);
     };
   }, []);
 
