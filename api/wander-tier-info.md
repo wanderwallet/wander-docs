@@ -2,9 +2,9 @@
 description: Wander Injected API getWanderTierInfo() function
 ---
 
-# Wander Tier
+# Get Wander tier info
 
-Some applications may request access to the Wander tier information of the user. The `getWanderTierInfo()` function returns the [result](wander-tier-info.md#result) from the API call.
+Some applications may request access to the Wander tier information of the user. The `getWanderTierInfo()` function returns detailed information about the user's tier, balance, rank, and other related metrics in the Wander ecosystem.
 
 {% hint style="info" %}
 **Note:** This function requires the [`ACCESS_ADDRESS`](connect.md#permissions) permission.
@@ -12,18 +12,22 @@ Some applications may request access to the Wander tier information of the user.
 
 ## Result
 
-The `getWanderTierInfo()` function returns an object with the user's tier information. The `tier` property is a string representing the user's tier. The `balance` property is a string representing the user's balance. The `rank` property is a number representing the user's rank in the balance leaderboard. The `progress` property is a number representing the user's progress in the tier system. The `snapshotTimestamp` property is a number representing the timestamp of the snapshot. The `totalHolders` property is a number representing the total number of WNDR holders in the snapshot.
+The `getWanderTierInfo()` function returns an object containing comprehensive tier information for the user.
+
+{% hint style="warning" %}
+**Note**: This function throws an error if there is an issue retrieving the tier information. Please make sure to handle such cases in your code.
+{% endhint %}
 
 ```typescript
 type Tier = "Prime" | "Edge" | "Reserve" | "Select" | "Core";
 
-type WanderTierInfo = {
-  tier: Tier;
-  balance: string;
-  rank: number;
-  progress: number;
-  snapshotTimestamp: number;
-  totalHolders: number;
+interface WanderTierInfo {
+  tier: Tier;                    // User's current tier
+  balance: string;               // User's WNDR token balance from the snapshot
+  rank: "" | number;             // User's rank in the balance leaderboard (empty string if not ranked)
+  progress: number;              // User's progress within the tier system (0-100)
+  snapshotTimestamp: number;     // Timestamp of the last snapshot update (in milliseconds)
+  totalHolders: number;          // Total number of WNDR token holders in the snapshot
 }
 ```
 
@@ -33,55 +37,68 @@ type WanderTierInfo = {
 // Connect to the extension and request access to the ACCESS_ADDRESS permission
 await window.arweaveWallet.connect(["ACCESS_ADDRESS"]);
 
-// Retrieve the tier of the user
-const info = await window.arweaveWallet.getWanderTierInfo();
-console.log("Tier of the user: ", info.tier);
-console.log("Balance: ", info.balance);
-console.log("Rank: ", info.rank);
-console.log("Progress: ", info.progress);
-console.log("Snapshot timestamp: ", info.snapshotTimestamp);
-console.log("Total holders: ", info.totalHolders);
+try {
+  // Retrieve the tier information of the user
+  const tierInfo = await window.arweaveWallet.getWanderTierInfo();
+  
+  console.log("Tier:", tierInfo.tier);
+  console.log("Balance:", tierInfo.balance);
+  console.log("Rank:", tierInfo.rank);
+  console.log("Progress:", tierInfo.progress);
+  console.log("Snapshot timestamp:", tierInfo.snapshotTimestamp);
+  console.log("Total holders:", tierInfo.totalHolders);
+} catch (error) {
+  console.error("Error fetching tier information:", error);
+}
 ```
 
-## Dryrun from the process
+## Alternative implementation via dryrun
 
-The following is an example of how to get the tier information of a user using the dryrun function from the process. Please make sure to cache the tier information in your application to avoid unnecessary calls to the process as the information is updated every 24 hours at 4:00 PM GMT. The `getWanderTierInfo` function returns `snapshotTimestamp` which is the timestamp of the snapshot. You can use this to check if the tier information is up to date and cache for the next 24 hours.
+For applications that need to query tier information for any wallet address (not just the connected user), you can also use the dryrun approach to query the Wander leaderboard process directly.
+
+{% hint style="info" %}
+**Note:** The tier information is updated every 24 hours at 4:00 PM GMT. Make sure to cache the results using the `snapshotTimestamp` to avoid unnecessary calls to the process.
+{% endhint %}
 
 ```ts
 import { dryrun } from "@permaweb/aoconnect";
 
-const tierIdToTierName = {
+const TIER_ID_TO_NAME = {
   1: "Prime",
-  2: "Edge",
+  2: "Edge", 
   3: "Reserve",
   4: "Select",
   5: "Core",
-};
+} as const;
 
 async function getWanderTierInfo(walletAddress: string): Promise<WanderTierInfo> {
-  const dryrunRes = await dryrun(
+  const dryrunRes = await dryrun({
     Owner: walletAddress,
     process: "rkAezEIgacJZ_dVuZHOKJR8WKpSDqLGfgPJrs_Es7CA",
     tags: [{ name: "Action", value: "Get-Wallet-Info" }]
-  );
+  });
 
   const message = dryrunRes.Messages?.[0];
   const data = JSON.parse(message?.Data || "{}");
 
   if (data?.tier === undefined || data?.tier === null) {
-    throw new Error("No tier data found");
+    throw new Error("No tier data found for the provided wallet address");
   }
 
-  const tierInfo = {
+  const tierInfo: WanderTierInfo = {
     ...data,
-    tier: tierIdToTierName[data.tier],
-  } satisfies WanderTierInfo;
+    tier: TIER_ID_TO_NAME[data.tier as keyof typeof TIER_ID_TO_NAME],
+  };
 
   return tierInfo;
 }
 
-
-const walletAddress = "...";
-const tierInfo = await getWanderTierInfo(walletAddress);
-console.log(tierInfo);
+// Usage example
+const walletAddress = "your-wallet-address-here";
+try {
+  const tierInfo = await getWanderTierInfo(walletAddress);
+  console.log("Tier information:", tierInfo);
+} catch (error) {
+  console.error("Failed to retrieve tier information:", error);
+}
 ```
