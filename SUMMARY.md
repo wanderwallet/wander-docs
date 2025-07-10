@@ -26,6 +26,7 @@
 * [Get active public key](api/get-active-public-key.md)
 * [Get all addresses](api/get-all-addresses.md)
 * [Get wallet names](api/get-wallet-names.md)
+* [Get Wander tier info](api/get-wander-tier-info.md)
 * [Sign Transaction](api/sign.md)
 * [Dispatch Transaction](api/dispatch.md)
 * [Sign DataItem](api/sign-dataitem.md)
