@@ -46,6 +46,7 @@ interface IframeOptions {
   iframe?: IframeOptions | HTMLIFrameElement;
   button?: ButtonOptions | boolean;
   onAuth?: (authInfo: AuthInfo) => void;
+  onBackup?: (backupInfo: BackupInfo) => void;
   onOpen?: () => void;
   onClose?: () => void;
   onResize?: (routeConfig: RouteConfig) => void;
@@ -54,6 +55,8 @@ interface IframeOptions {
 
 }
 ```
+
+[Github: wander-connect.types.ts](https://github.com/wanderwallet/Wander/blob/production/wander-connect-sdk/src/wander-connect.types.ts)
 
 ## Iframe Customization Options
 
