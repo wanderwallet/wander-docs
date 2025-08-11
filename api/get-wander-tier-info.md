@@ -60,8 +60,21 @@ For applications that need to query tier information for any wallet address (not
 **Note:** The tier information is updated every 24 hours at 4:00 PM GMT. Make sure to cache the results using the `snapshotTimestamp` to avoid unnecessary calls to the process.
 {% endhint %}
 
+### Single wallet query
+
 ```ts
 import { dryrun } from "@permaweb/aoconnect";
+
+type Tier = "Prime" | "Edge" | "Reserve" | "Select" | "Core";
+
+interface WanderTierInfo {
+  tier: Tier;                    
+  balance: string;               
+  rank: "" | number;             
+  progress: number;              
+  snapshotTimestamp: number;     
+  totalHolders: number;          
+}
 
 const TIER_ID_TO_NAME = {
   1: "Prime",
@@ -71,6 +84,7 @@ const TIER_ID_TO_NAME = {
   5: "Core",
 } as const;
 
+// Single wallet query
 async function getWanderTierInfo(walletAddress: string): Promise<WanderTierInfo> {
   const dryrunRes = await dryrun({
     Owner: walletAddress,
@@ -93,12 +107,77 @@ async function getWanderTierInfo(walletAddress: string): Promise<WanderTierInfo>
   return tierInfo;
 }
 
-// Usage example
 const walletAddress = "your-wallet-address-here";
 try {
   const tierInfo = await getWanderTierInfo(walletAddress);
   console.log("Tier information:", tierInfo);
 } catch (error) {
   console.error("Failed to retrieve tier information:", error);
+}
+```
+
+### Batch wallet query
+
+```ts
+import { dryrun } from "@permaweb/aoconnect";
+
+type Tier = "Prime" | "Edge" | "Reserve" | "Select" | "Core";
+
+interface WanderTierInfo {
+  tier: Tier;                    
+  balance: string;               
+  rank: "" | number;             
+  progress: number;              
+  snapshotTimestamp: number;     
+  totalHolders: number;          
+}
+
+const TIER_ID_TO_NAME = {
+  1: "Prime",
+  2: "Edge", 
+  3: "Reserve",
+  4: "Select",
+  5: "Core",
+} as const;
+
+// Batch wallet query
+async function getBatchWanderTierInfo(walletAddresses: string[]): Promise<Record<string, WanderTierInfo>> {
+  const dryrunRes = await dryrun({
+    process: "rkAezEIgacJZ_dVuZHOKJR8WKpSDqLGfgPJrs_Es7CA",
+    data: JSON.stringify(walletAddresses),
+    tags: [{ name: "Action", value: "Get-Wallets-Info" }],
+  });
+
+  if (dryrunRes.Error) throw new Error(dryrunRes.Error);
+
+  const message = dryrunRes.Messages?.[0];
+  const data = JSON.parse(message?.Data || "{}");
+
+  const batchTierInfo: Record<string, WanderTierInfo> = {};
+
+  for (const [walletAddress, walletData] of Object.entries<any>(data)) {
+    batchTierInfo[walletAddress] = {
+      ...walletData,
+      tier: TIER_ID_TO_NAME[walletData.tier as keyof typeof TIER_ID_TO_NAME],
+    };
+  }
+
+  return batchTierInfo;
+}
+
+const walletAddresses = [
+  "wallet-address-1",
+  "wallet-address-2", 
+  "wallet-address-3"
+];
+
+try {
+  const batchTierInfo = await getBatchWanderTierInfo(walletAddresses);
+  
+  for (const [address, tierInfo] of Object.entries(batchTierInfo)) {
+    console.log(`Tier info for ${address}: `, tierInfo);
+  }
+} catch (error) {
+  console.error("Failed to retrieve batch tier information:", error);
 }
 ```
