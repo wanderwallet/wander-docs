@@ -60,8 +60,21 @@ For applications that need to query tier information for any wallet address (not
 **Note:** The tier information is updated every 24 hours at 4:00 PM GMT. Make sure to cache the results using the `snapshotTimestamp` to avoid unnecessary calls to the process.
 {% endhint %}
 
+### Single wallet query
+
 ```ts
 import { dryrun } from "@permaweb/aoconnect";
+
+type Tier = "Prime" | "Edge" | "Reserve" | "Select" | "Core";
+
+interface WanderTierInfo {
+  tier: Tier;                    
+  balance: string;               
+  rank: "" | number;             
+  progress: number;              
+  snapshotTimestamp: number;     
+  totalHolders: number;          
+}
 
 const TIER_ID_TO_NAME = {
   1: "Prime",
@@ -94,6 +107,39 @@ async function getWanderTierInfo(walletAddress: string): Promise<WanderTierInfo>
   return tierInfo;
 }
 
+const walletAddress = "your-wallet-address-here";
+try {
+  const tierInfo = await getWanderTierInfo(walletAddress);
+  console.log("Tier information:", tierInfo);
+} catch (error) {
+  console.error("Failed to retrieve tier information:", error);
+}
+```
+
+### Batch wallet query
+
+```ts
+import { dryrun } from "@permaweb/aoconnect";
+
+type Tier = "Prime" | "Edge" | "Reserve" | "Select" | "Core";
+
+interface WanderTierInfo {
+  tier: Tier;                    
+  balance: string;               
+  rank: "" | number;             
+  progress: number;              
+  snapshotTimestamp: number;     
+  totalHolders: number;          
+}
+
+const TIER_ID_TO_NAME = {
+  1: "Prime",
+  2: "Edge", 
+  3: "Reserve",
+  4: "Select",
+  5: "Core",
+} as const;
+
 // Batch wallet query
 async function getBatchWanderTierInfo(walletAddresses: string[]): Promise<Record<string, WanderTierInfo>> {
   const dryrunRes = await dryrun({
@@ -119,16 +165,6 @@ async function getBatchWanderTierInfo(walletAddresses: string[]): Promise<Record
   return batchTierInfo;
 }
 
-// Single wallet usage example
-const walletAddress = "your-wallet-address-here";
-try {
-  const tierInfo = await getWanderTierInfo(walletAddress);
-  console.log("Tier information:", tierInfo);
-} catch (error) {
-  console.error("Failed to retrieve tier information:", error);
-}
-
-// Batch wallet usage example
 const walletAddresses = [
   "wallet-address-1",
   "wallet-address-2", 
