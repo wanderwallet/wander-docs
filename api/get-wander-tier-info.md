@@ -76,6 +76,10 @@ interface WanderTierInfo {
   totalHolders: number;          
 }
 
+type WanderTierInfoFromApi = Omit<WanderTierInfo, "tier"> & {
+  tier: number;
+}
+
 const TIER_ID_TO_NAME = {
   1: "Prime",
   2: "Edge", 
@@ -84,19 +88,50 @@ const TIER_ID_TO_NAME = {
   5: "Core",
 } as const;
 
+function isValidTierInfo(data: WanderTierInfoFromApi): data is WanderTierInfoFromApi {
+  return (
+    data &&
+    typeof data === "object" &&
+    typeof data.tier === "number" &&
+    typeof data.balance === "string" &&
+    typeof data.rank === "number" &&
+    typeof data.progress === "number" &&
+    typeof data.snapshotTimestamp === "number" &&
+    typeof data.totalHolders === "number"
+  );
+}
+
 // Single wallet query
 async function getWanderTierInfo(walletAddress: string): Promise<WanderTierInfo> {
-  const dryrunRes = await dryrun({
-    Owner: walletAddress,
-    process: "rkAezEIgacJZ_dVuZHOKJR8WKpSDqLGfgPJrs_Es7CA",
-    tags: [{ name: "Action", value: "Get-Wallet-Info" }]
-  });
+  let data: WanderTierInfoFromApi;
+  try {
+    const response = await fetch(`https://wander-cache-ruddy.vercel.app/api/tier-info?address=${walletAddress}`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch tier info from cache API");
+    }
 
-  const message = dryrunRes.Messages?.[0];
-  const data = JSON.parse(message?.Data || "{}");
+    const responseData = await response.json();
 
-  if (data?.tier === undefined || data?.tier === null) {
-    throw new Error("No tier data found for the provided wallet address");
+    if (!isValidTierInfo(responseData)) {
+      throw new Error("Invalid tier info data format from cache API");
+    }
+
+    data = responseData;
+  } catch {
+    const dryrunRes = await dryrun({
+      Owner: walletAddress,
+      process: "rkAezEIgacJZ_dVuZHOKJR8WKpSDqLGfgPJrs_Es7CA",
+      tags: [{ name: "Action", value: "Get-Wallet-Info" }]
+    });
+
+    const message = dryrunRes.Messages?.[0];
+    const parsedData = JSON.parse(message?.Data || "{}");
+
+    if (!isValidTierInfo(parsedData)) {
+      throw new Error("Invalid tier info data from WNDR tier process");
+    }
+
+    data = parsedData;
   }
 
   const tierInfo: WanderTierInfo = {
@@ -132,6 +167,10 @@ interface WanderTierInfo {
   totalHolders: number;          
 }
 
+type WanderTierInfoFromApi = Omit<WanderTierInfo, "tier"> & {
+  tier: number;
+}
+
 const TIER_ID_TO_NAME = {
   1: "Prime",
   2: "Edge", 
@@ -142,16 +181,27 @@ const TIER_ID_TO_NAME = {
 
 // Batch wallet query
 async function getBatchWanderTierInfo(walletAddresses: string[]): Promise<Record<string, WanderTierInfo>> {
-  const dryrunRes = await dryrun({
-    process: "rkAezEIgacJZ_dVuZHOKJR8WKpSDqLGfgPJrs_Es7CA",
-    data: JSON.stringify(walletAddresses),
-    tags: [{ name: "Action", value: "Get-Wallets-Info" }],
-  });
+  let data: Record<string, WanderTierInfoFromApi>;
 
-  if (dryrunRes.Error) throw new Error(dryrunRes.Error);
+  try {
+    const response = await fetch(`https://wander-cache-ruddy.vercel.app/api/tier-info?addresses=${walletAddresses.join(",")}`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch tier info from cache API");
+    }
 
-  const message = dryrunRes.Messages?.[0];
-  const data = JSON.parse(message?.Data || "{}");
+    data = await response.json();
+  } catch {
+    const dryrunRes = await dryrun({
+      process: "rkAezEIgacJZ_dVuZHOKJR8WKpSDqLGfgPJrs_Es7CA",
+      data: JSON.stringify(walletAddresses),
+      tags: [{ name: "Action", value: "Get-Wallets-Info" }],
+    });
+
+    if (dryrunRes.Error) throw new Error(dryrunRes.Error);
+
+    const message = dryrunRes.Messages?.[0];
+    data = JSON.parse(message?.Data || "{}");
+  }
 
   const batchTierInfo: Record<string, WanderTierInfo> = {};
 
