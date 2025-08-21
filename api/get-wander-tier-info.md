@@ -105,7 +105,7 @@ function isValidTierInfo(data: WanderTierInfoFromApi): data is WanderTierInfoFro
 async function getWanderTierInfo(walletAddress: string): Promise<WanderTierInfo> {
   let data: WanderTierInfoFromApi;
   try {
-    const response = await fetch(`https://wander-cache-ruddy.vercel.app/api/tier-info?address=${walletAddress}`);
+    const response = await fetch(`https://cache.wander.app/api/tier-info?address=${walletAddress}`);
     if (!response.ok) {
       throw new Error("Failed to fetch tier info from cache API");
     }
@@ -184,7 +184,7 @@ async function getBatchWanderTierInfo(walletAddresses: string[]): Promise<Record
   let data: Record<string, WanderTierInfoFromApi>;
 
   try {
-    const response = await fetch(`https://wander-cache-ruddy.vercel.app/api/tier-info?addresses=${walletAddresses.join(",")}`);
+    const response = await fetch(`https://cache.wander.app/api/tier-info?addresses=${walletAddresses.join(",")}`);
     if (!response.ok) {
       throw new Error("Failed to fetch tier info from cache API");
     }
